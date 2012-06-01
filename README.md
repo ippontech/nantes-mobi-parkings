@@ -16,7 +16,7 @@ You will need the following tools to build/execute **Nantes Mobi Parkings**:
 
 Installation
 -------------
-**TODO Build a dedicated page to describe install of development workspace**
+See [Wiki:Install of devel workspace](https://github.com/ippontech/nantes-mobi-parkings/wiki/Install-of-devel-workspace)
 
 Dependencies
 ------------
