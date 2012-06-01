@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Nantes Mobi Parkings</string>
+    <string name="search_hint">Rechercher un parking</string>
+    <string name="main_button_list">Liste</string>
+    <string name="main_button_map">Carte</string>
+    <string name="main_button_stars">Favoris</string>
+    
+    <string name="menu_settings">Préférences</string>
+    <string name="menu_refresh">Rafraichir</string>
+    <string name="menu_about">A propos</string>
+
+    <string-array name="settings_default_sort_labels">
+        <item>Nom</item>
+        <item>Distance</item>
+    </string-array>
+    <string-array name="settings_default_sort_ids">
+        <item>NAME</item>
+        <item>DISTANCE</item>
+    </string-array>
+
+    <string name="settings_default_sort">Tri</string>
+    <string name="settings_default_sort_summary">Tri par défaut des parkings</string>
+    <string name="settings_hide_parkings">Cacher indispo. ?</string>
+    <string name="settings_hide_parkings_summary">Masquer les parkings non-disponibles</string>
+    <string name="settings_configuration">Configuration</string>
+    <string name="settings_data">État des données</string>
+    <string name="settings_data_staticrefresh_label">Liste des parkings</string>
+    <string name="settings_data_staticrefresh_summary">Date de dernière mise à jour : %1$s</string>
+    <string name="settings_data_dynrefresh_label">Disponibilités des parkings</string>
+    <string name="settings_data_dynrefresh_summary">Heure de dernière mise à jour : %1$s</string>
+	<string name="settings_show_traffic">Afficher la circulation ?</string>
+	<string name="settings_show_traffic_summary">Afficher l\'état de la circulation</string>
+	
+	<string name="header_favori">Distance</string>
+	<string name="header_nom">Places disponibles</string>
+	
+	<string name="list_parking_empty_download">Téléchargement des parkings en cours&#8230;</string>
+	<string name="list_parking_fav_empty">Aucun favoris.</string>
+	
+	<string name="park_status_only_subscribed">Abonnés uniquement</string>
+	<string name="park_status_closed">Fermé</string>
+	<string name="park_status_full">Complet</string>
+	<string name="park_status_ok">%1$s places</string>
+	<string name="park_status_invalid">-</string>
+	
+		<string name="apropos_title">À propos</string>
+		<string name="apropos_title_appli">Nantes Mobi Parking</string>
+		<string name="apropos_title_ouverture">Ouverture des données</string>
+		<string name="apropos_title_evolutions">Fonctionnalités à venir</string>
+		<string name="apropos_title_developpeurs">Développeurs</string>
+	<string name="apropos_objectif">L\'application &lt;b>Nantes Mobi Parkings&lt;/b> permet d\'informer
+	    facilement les usagers nantais sur le stationnement de véhicules au sein de l\'agglomération Nantaise.
+	    Sa fonctionnalité première est donc d\'afficher les parkings publics de Nantes sur une carte, avec leurs disponibilités
+	    (en terme de places) en temps réel.
+	</string>
+	<string name="apropos_outils_utilises">Cette application utilise les données publiques
+	    mises à disposition par Nantes Métropole et la ville de Nantes dans le cadre du projet d\'ouverture de données.
+	    Liste des données utilisées :
+	    &lt;br/>&lt;a href="http://data.nantes.fr">site OpenData Nantes&lt;/a> (emplacement des parkings, tronçons de circulation, données en temps réel sur les parkings et les flux de circulation - sous license OdBL) ;
+	    &lt;br/>&lt;a href="http://www.bisonfute.equipement.gouv.fr/diri/listeflashs.do">site Bison fûté&lt;/a> (circulation du périphérique) ;
+	    &lt;br/>&lt;a href="http://www.nantesmetropole.fr">site Nantes Metropole&lt;/a> (horaires d\'ouverture et places réservées des parkings) ;
+	</string>
+	<string name="apropos_developpeurs">&lt;p>Alvin BERTHELOT&lt;/p>&lt;p>Damien RAUDE-MORVAN&lt;/p>&lt;p>Nicolas GUILLOT&lt;/p>&lt;p>Guillaume GRANGER&lt;/p></string>
+	<string name="apropos_votez">Nous participons à l\'appel à projets innovants &lt;b>Rendez-moi la ville + facile&lt;/b>.
+	N\'hésitez pas à voter pour nous à partir du 18 mai 2012 sur :
+	&lt;br/> &lt;a href="http://data.nantes.fr/appel-a-projets/">http://data.nantes.fr/appel-a-projets/&lt;/a>
+	</string>
+	<string name="apropos_fonctionnalite_a_venir">Les fonctionnalités à venir sont : l\'affichage des travaux publics en cours de réalisation, la navigation vers les parkings&#8230;</string>
+</resources>

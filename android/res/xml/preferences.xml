@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Préférences" >
+
+    <!--
+    !!! Les valeurs par defaut et les clefs doivent être synchronisées
+    avec la classe Preferences.
+    -->
+
+    <ListPreference
+        android:defaultValue="DISTANCE"
+        android:entries="@array/settings_default_sort_labels"
+        android:entryValues="@array/settings_default_sort_ids"
+        android:key="default_sort"
+        android:summary="@string/settings_default_sort_summary"
+        android:title="@string/settings_default_sort" />
+
+    <!-- TODO Damien: Pour le moment, on cache ces préférence 
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="hide_parkings"
+        android:summary="@string/settings_hide_parkings_summary"
+        android:title="@string/settings_hide_parkings" />
+	
+    -->
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="show_traffic"
+        android:summary="@string/settings_show_traffic_summary"
+        android:title="@string/settings_show_traffic" />
+
+</PreferenceScreen>

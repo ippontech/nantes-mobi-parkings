@@ -1,0 +1,73 @@
+
+================================================
+TITRE DU JEU DE DONNEES
+================================================
+
+Liste des équipements publics : Déplacement (CSV)
+
+================================================
+DESCRIPTION
+================================================
+
+Les équipements publics sont l'ensemble des équipements offrant un service public aux
+usagers dans leur vie quotidienne.
+On y retrouve différents types d'équipements tels que : les mairies, les écoles, les lieux
+de cultes, les piscines, les gares, les hôpitaux....
+
+================================================
+INFORMATIONS TECHNIQUES
+================================================
+
+Date de dernière mise à jour    : 24/02/2012
+Précision géométrique           : 5 mètres
+
+Système de projection d'origine : NTF Lambert II (urn:ogc:def:crs:EPSG:6.11)
+Type de géométrie               : point
+Couverture spatiale (wgs84)     : limite nord 47.353296, limite sud 47.101919
+                                  limite ouest -1.921802, limite est -1.358542                                    
+
+Modification de la structure du fichier depuis la dernière publication : non
+
+================================================
+ATTRIBUTS
+================================================
+
+_IDOBJ       : Identifiant
+NOM_COMPLET  : Nom complet
+THEME        : Code Thème
+LIBTHEME     : Libellé thème
+CATEGORIE    : Code Catégorie
+LIBCATEGORIE : Libellé Catégorie
+TYPE         : Code type
+LIBTYPE      : Libellé Type
+STATUT       : Statut de l'équipement
+COMMUNE      : Nom de la commune (PCI)
+ADRESSE      : Adresse en clair
+TELEPHONE    : Numéro de téléphone
+WEB          : Site internet
+CODE_POSTAL  : Code postal
+LONG_WGS84   : Longitude WGS84
+LAT_WGS84    : Latitude WGS84
+
+================================================
+CONTACT
+================================================
+
+Pour toute demande d'information ou remarque, 
+merci de passer par le forum du site http://data.nantes.fr
+
+================================================
+INFORMATIONS LEGALES
+================================================
+
+Propriétaire : Nantes Métropole
+
+Gestionnaire : Nantes Métropole
+
+Licence      : Open Database License (ODbL 1.0)
+
+================================================
+SIGNATURES DES FICHIERS
+================================================
+
+Equipements_publics_deplacement.csv (md5) : 8d1b9e02a64a3ca75bbe664fb985dca1

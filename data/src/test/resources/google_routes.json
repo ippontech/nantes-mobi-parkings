@@ -1,0 +1,164 @@
+{
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 47.25519000000001,
+               "lng" : -1.521580
+            },
+            "southwest" : {
+               "lat" : 47.24830,
+               "lng" : -1.530050
+            }
+         },
+         "copyrights" : "Données cartographiques ©2011 Google",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "1,2 km",
+                  "value" : 1203
+               },
+               "duration" : {
+                  "text" : "6 minutes",
+                  "value" : 345
+               },
+               "end_address" : "251 Route de Saint-Joseph, 44300 Nantes, France",
+               "end_location" : {
+                  "lat" : 47.254280,
+                  "lng" : -1.529910
+               },
+               "start_address" : "218 Boulevard Jules Verne, 44300 Nantes, France",
+               "start_location" : {
+                  "lat" : 47.24830,
+                  "lng" : -1.521630
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "6 m",
+                        "value" : 6
+                     },
+                     "duration" : {
+                        "text" : "1 minute",
+                        "value" : 1
+                     },
+                     "end_location" : {
+                        "lat" : 47.248350,
+                        "lng" : -1.521580
+                     },
+                     "html_instructions" : "Head \u003cb\u003enortheast\u003c/b\u003e on \u003cb\u003eBd Jules Verne\u003c/b\u003e toward \u003cb\u003eRue du Ranzay\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "{dk_HdehHII"
+                     },
+                     "start_location" : {
+                        "lat" : 47.24830,
+                        "lng" : -1.521630
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,8 km",
+                        "value" : 815
+                     },
+                     "duration" : {
+                        "text" : "2 minutes",
+                        "value" : 129
+                     },
+                     "end_location" : {
+                        "lat" : 47.252890,
+                        "lng" : -1.529730
+                     },
+                     "html_instructions" : "Take the 1st \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eRue du Ranzay\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "eek_HzdhHUl@OX]p@aB`DCHELARGdAARCJCJCHUf@CFiAvBaC|EOTKJOHu@XOHIDQNs@|AU^QXEHEHa@x@a@|@g@nA}AlEUn@ENAP?X"
+                     },
+                     "start_location" : {
+                        "lat" : 47.248350,
+                        "lng" : -1.521580
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "13 m",
+                        "value" : 13
+                     },
+                     "duration" : {
+                        "text" : "1 minute",
+                        "value" : 29
+                     },
+                     "end_location" : {
+                        "lat" : 47.252990,
+                        "lng" : -1.529830
+                     },
+                     "html_instructions" : "At the roundabout, take the \u003cb\u003e1st\u003c/b\u003e exit",
+                     "polyline" : {
+                        "points" : "qal_HxwiHCBABMJ"
+                     },
+                     "start_location" : {
+                        "lat" : 47.252890,
+                        "lng" : -1.529730
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,2 km",
+                        "value" : 244
+                     },
+                     "duration" : {
+                        "text" : "1 minute",
+                        "value" : 74
+                     },
+                     "end_location" : {
+                        "lat" : 47.25517000000001,
+                        "lng" : -1.529740
+                     },
+                     "html_instructions" : "At the roundabout, take the \u003cb\u003e1st\u003c/b\u003e exit onto \u003cb\u003eRoute de Saint-Joseph\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "ebl_HlxiHC?C?A@ADMEKCm@G]AS?QBQ@_ACA?sAC}@AS?E?KAO?"
+                     },
+                     "start_location" : {
+                        "lat" : 47.252990,
+                        "lng" : -1.529830
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,1 km",
+                        "value" : 125
+                     },
+                     "duration" : {
+                        "text" : "2 minutes",
+                        "value" : 112
+                     },
+                     "end_location" : {
+                        "lat" : 47.254280,
+                        "lng" : -1.529910
+                     },
+                     "html_instructions" : "Make a \u003cb\u003eU-turn\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "yol_HzwiHC|@N?H?D?T?NC`@E|@ONA"
+                     },
+                     "start_location" : {
+                        "lat" : 47.25517000000001,
+                        "lng" : -1.529740
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "{dk_HdehHIIUl@m@jAeBjDG`@IxAGVYp@mA~BqCrF[TeAb@[TiA|BWb@g@bAiAlCsB|FG`@?XCBONG?CFYIkAIe@BqAAgDEQAO?C|@X?Z?~B["
+         },
+         "summary" : "Rue du Ranzay and Route de Saint-Joseph",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

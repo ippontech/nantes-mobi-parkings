@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d2LogicalModel xmlns="http://datex2.eu/schema/1_0/1_0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://datex2.eu/schema/1_0/1_0 http://datex2.eu/schema/1_0/1_0/DATEXIISchema_1_0_1_0.xsd"
+                modelBaseVersion="1.0">
+    <exchange>
+        <supplierIdentification>
+            <country>fr</country>
+            <nationalIdentifier>MinEquip</nationalIdentifier>
+        </supplierIdentification>
+    </exchange>
+    <payloadPublication lang="fr" xsi:type="ElaboratedDataPublication">
+        <publicationTime>2012-04-20T19:12:59+02:00</publicationTime>
+        <publicationCreator>
+            <country>fr</country>
+            <nationalIdentifier>MinEquip</nationalIdentifier>
+        </publicationCreator>
+        <headerInformation>
+            <confidentiality>noRestriction</confidentiality>
+            <informationStatus>real</informationStatus>
+        </headerInformation>
+        <elaboratedData id="I1cigt_nantes_6381_CPT_TRC_92_0_CPT_TRC_92_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.31</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_92_0_CPT_TRC_92_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.32</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6382_CPT_TRC_88_0_CPT_TRC_88_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.U1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_88_0_CPT_TRC_88_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.U2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6383_CPT_TRC_86_0_CPT_TRC_86_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.B1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_86_0_CPT_TRC_86_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.B2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6384_CPT_TRC_91_0_CPT_TRC_91_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.X1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_91_0_CPT_TRC_91_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.X2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6385_CPT_TRC_140_0_CPT_TRC_140_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.W1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_140_0_CPT_TRC_140_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.W2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6386_CPT_TRC_93_0_CPT_TRC_93_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWl44.B1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_93_0_CPT_TRC_93_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWl44.B2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6387_CPT_TRC_89_0_CPT_TRC_89_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.L1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_89_0_CPT_TRC_89_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.L2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6388_CPT_TRC_90_0_CPT_TRC_90_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.a1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_90_0_CPT_TRC_90_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.a2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6389_CPT_TRC_97_0_CPT_TRC_97_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.h1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_97_0_CPT_TRC_97_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.h2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6390_CPT_TRC_96_0_CPT_TRC_96_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.g1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_96_0_CPT_TRC_96_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.g2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6391_CPT_TRC_87_0_CPT_TRC_87_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.b1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_87_0_CPT_TRC_87_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.b2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6392_CPT_TRC_98_0_CPT_TRC_98_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.11</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_98_0_CPT_TRC_98_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.12</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>congested</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6393_CPT_TRC_99_0_CPT_TRC_99_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.T1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_99_0_CPT_TRC_99_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.T2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6394_CPT_TRC_95_0_CPT_TRC_95_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.d1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_95_0_CPT_TRC_95_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.d2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6395_CPT_TRC_100_0_CPT_TRC_100_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.C1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_100_0_CPT_TRC_100_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.C2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6396_CPT_TRC_102_02012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.J2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6397_CPT_TRC_139_0_CPT_TRC_139_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.Y1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_139_0_CPT_TRC_139_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.Y2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6398_CPT_TRC_101_02012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.I1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6399_CPT_TRC_176_0_CPT_TRC_176_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.e1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_176_0_CPT_TRC_176_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.e2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6400_CPT_TRC_94_0_CPT_TRC_94_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.V1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>unknown</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_94_0_CPT_TRC_94_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.V2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>unknown</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6401_CPT_TRC_85_0_CPT_TRC_85_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.21</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_85_0_CPT_TRC_85_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.22</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6402_CPT_TRC_168_0_CPT_TRC_168_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.Q1</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_168_0_CPT_TRC_168_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.Q2</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantes_6403_CPT_TRC_84_0_CPT_TRC_84_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.41</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+        <elaboratedData id="I1cigt_nantesCPT_TRC_84_0_CPT_TRC_84_12012_04_20T19_12_59_02_00">
+            <sourceInformation>
+                <sourceIdentification>cigt_nantes</sourceIdentification>
+            </sourceInformation>
+            <basicDataValue xsi:type="TrafficStatusValue">
+                <time>2012-04-20T19:12:59+02:00</time>
+                <affectedLocation>
+                    <locationContainedInGroup xsi:type="LocationByReference">
+                        <predefinedLocationReference>MWL44.42</predefinedLocationReference>
+                    </locationContainedInGroup>
+                </affectedLocation>
+                <trafficStatus>freeFlow</trafficStatus>
+            </basicDataValue>
+        </elaboratedData>
+    </payloadPublication>
+</d2LogicalModel>

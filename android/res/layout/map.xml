@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+        >
+    <fr.ippon.android.opendata.android.map.CustomMapView
+            android:id="@+id/mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/main_overlay_descr"
+                  android:layout_width="320dip"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="43dip"
+                  android:background="#AA000000"
+                  android:orientation="horizontal"
+                  android:padding="5dip"
+                  android:layout_gravity="center_horizontal|bottom">
+        <TextView
+                android:id="@+id/overlay_descr"
+                android:layout_width="275dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="#ffffffff"
+                android:padding="5dip"
+                android:paddingRight="15dip"/>
+
+        <ImageView
+                android:id="@+id/overlay_descr_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/overlay_descr"
+                android:layout_alignParentTop="true"
+                android:padding="1dip"
+                android:src="@drawable/ic_cancel"/>
+       	<ImageView
+                android:id="@+id/overlay_descr_navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/overlay_descr"
+                android:layout_below="@+id/overlay_descr_close"
+                android:src="@drawable/ic_navigation"/>
+        
+    </RelativeLayout>
+</FrameLayout>

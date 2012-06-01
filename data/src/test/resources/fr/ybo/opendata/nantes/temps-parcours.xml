@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<opendata>
+	<request>http://data.nantes.fr/api/getTempsParcours/1.0/39W9VSNCSASEOGV
+	</request>
+	<answer>
+		<status code="0" message="OK" />
+		<data>
+			<Itineraires>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>011</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>012</Identifiant>
+					<Temps>5</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>021</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>022</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>031</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>032</Identifiant>
+					<Temps>7</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:04</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>041</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:04</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>042</Identifiant>
+					<Temps>9</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:04</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>051</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:04</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>052</Identifiant>
+					<Temps>8</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:04</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>061</Identifiant>
+					<Temps>8</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:04</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>062</Identifiant>
+					<Temps>7</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:04</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>071</Identifiant>
+					<Temps>10</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:04</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>072</Identifiant>
+					<Temps>10</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:04</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>081</Identifiant>
+					<Temps>4</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>082</Identifiant>
+					<Temps>4</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>091</Identifiant>
+					<Temps>3</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>092</Identifiant>
+					<Temps>4</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:00</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>111</Identifiant>
+					<Temps>5</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>112</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:01</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>121</Identifiant>
+					<Temps>4</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>122</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>141</Identifiant>
+					<Temps>7</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>142</Identifiant>
+					<Temps>9</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:01</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>143</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:00</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>161</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>162</Identifiant>
+					<Temps>7</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>171</Identifiant>
+					<Temps>4</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:05</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>172</Identifiant>
+					<Temps>5</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>181</Identifiant>
+					<Temps>8</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:01</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>182</Identifiant>
+					<Temps>7</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:00</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>191</Identifiant>
+					<Temps>5</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:04</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>192</Identifiant>
+					<Temps>5</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>201</Identifiant>
+					<Temps>4</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>202</Identifiant>
+					<Temps>5</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>211</Identifiant>
+					<Temps>5</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>212</Identifiant>
+					<Temps>5</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:00</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>214</Identifiant>
+					<Temps>6</Temps>
+					<Validite>1</Validite>
+					<Horodatage>13/03/2008 14:57:46</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>221</Identifiant>
+					<Temps>2</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:00</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>222</Identifiant>
+					<Temps>4</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:04</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>261</Identifiant>
+					<Temps>11</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:18:04</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>271</Identifiant>
+					<Temps>8</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>272</Identifiant>
+					<Temps>8</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>311</Identifiant>
+					<Temps>7</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>312</Identifiant>
+					<Temps>7</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>331</Identifiant>
+					<Temps>5</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>332</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:03</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>361</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:01</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>362</Identifiant>
+					<Temps>7</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:01</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>371</Identifiant>
+					<Temps>6</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:01</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>372</Identifiant>
+					<Temps>7</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:01</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>381</Identifiant>
+					<Temps>7</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:01</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>411</Identifiant>
+					<Temps>4</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>412</Identifiant>
+					<Temps>4</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>421</Identifiant>
+					<Temps>3</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:02</Horodatage>
+				</Itineraire>
+				<Itineraire><!-- VER=1.0 GEN=FARECO_VEGATP -->
+					<Identifiant>422</Identifiant>
+					<Temps>3</Temps>
+					<Validite>0</Validite>
+					<Horodatage>21/01/2012 23:19:01</Horodatage>
+				</Itineraire>
+			</Itineraires>
+		</data>
+	</answer>
+</opendata>

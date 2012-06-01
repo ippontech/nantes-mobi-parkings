@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/apropos_title" />
+    <ScrollView      
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"	    
+	    >
+
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center"
+		    android:paddingTop="10dp"
+		    android:text="@string/apropos_title_appli"
+		    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/icon" />
+
+
+
+        <TextView
+            android:id="@+id/apropos_objectif"
+            android:linksClickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center_vertical|center_horizontal" />
+
+
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center"
+		    android:paddingTop="10dp"
+		    android:paddingBottom="10dp"
+		    android:text="@string/apropos_title_ouverture"
+		    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/apropos_outils_utilises"
+            android:linksClickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center_vertical|center_horizontal"  />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/nod" />
+
+        <TextView
+            android:id="@+id/apropos_votez"
+            android:linksClickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center_vertical|center_horizontal"  />
+
+      <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center"
+		    android:paddingTop="10dp"
+		    android:paddingBottom="10dp"
+		    android:text="@string/apropos_title_evolutions"
+		    android:textAppearance="?android:attr/textAppearanceLarge" />
+        		
+        <TextView
+            android:id="@+id/apropos_fonctionnalite_a_venir"
+            android:linksClickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:gravity="center_vertical|center_horizontal" />
+
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center"
+		    android:paddingTop="10dp"
+		    android:paddingBottom="10dp"
+		    android:text="@string/apropos_title_developpeurs"
+		    android:textAppearance="?android:attr/textAppearanceLarge" />
+              
+        <TextView
+            android:id="@+id/apropos_developpeurs"
+            android:linksClickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+            android:gravity="center_vertical|center_horizontal"  />
+
+    
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

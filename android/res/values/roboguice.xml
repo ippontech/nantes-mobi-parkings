@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    http://code.google.com/p/roboguice/wiki/UpgradingTo20
+    -->
+    <string-array name="roboguice_modules">
+        <item>fr.ippon.android.opendata.data.ParkingDataModule</item>
+        <item>fr.ippon.android.opendata.android.ParkingAndroidModule</item>
+    </string-array>
+</resources>

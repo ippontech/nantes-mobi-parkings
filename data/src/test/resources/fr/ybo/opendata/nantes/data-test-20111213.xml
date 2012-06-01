@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<opendata>
+	<request>http://data.nantes.fr/api/getDisponibiliteParkingsPublics/1.0/39W9VSNCSASEOGV</request>
+	<answer>
+		<status code="0" message="OK"/>
+		<data><Groupes_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>2</Grp_identifiant>
+      <Grp_nom>DECRE-BOUFFAY</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>247</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>552</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 12:23:40</Grp_horodatage>
+      <IdObj>284</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>3</Grp_identifiant>
+      <Grp_nom>TOUR DE BRETAGNE</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>355</Grp_disponible>
+      <Grp_complet>24</Grp_complet>
+      <Grp_exploitation>660</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>299</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>4</Grp_identifiant>
+      <Grp_nom>GRASLIN</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>163</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>506</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>288</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>5</Grp_identifiant>
+      <Grp_nom>ARISTIDE BRIAND</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>145</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>307</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>1043</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>6</Grp_identifiant>
+      <Grp_nom>MEDIATHEQUE</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>206</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>432</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>134</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>7</Grp_identifiant>
+      <Grp_nom>COMMERCE</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>283</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>533</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>677</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>8</Grp_identifiant>
+      <Grp_nom>TALENSAC</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>283</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>378</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>1046</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>9</Grp_identifiant>
+      <Grp_nom>CITE INT DES CONGRES</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>342</Grp_disponible>
+      <Grp_complet>10</Grp_complet>
+      <Grp_exploitation>433</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>1044</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>10</Grp_identifiant>
+      <Grp_nom>CATHEDRALE</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>171</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>391</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3652</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>11</Grp_identifiant>
+      <Grp_nom>LES MACHINES</Grp_nom>
+      <Grp_statut>2</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>0</Grp_disponible>
+      <Grp_complet>0</Grp_complet>
+      <Grp_exploitation>0</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3951</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>13</Grp_identifiant>
+      <Grp_nom>BACO-LU</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>83</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>160</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3551</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>14</Grp_identifiant>
+      <Grp_nom>FEYDEAU</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>10</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>110</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3549</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>15</Grp_identifiant>
+      <Grp_nom>HOTEL DIEU</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>81</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>94</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3550</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>16</Grp_identifiant>
+      <Grp_nom>LIMITE 1 Heure</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>27</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>32</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3590</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>17</Grp_identifiant>
+      <Grp_nom>C.H.U</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>126</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>140</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3651</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>21</Grp_identifiant>
+      <Grp_nom>GARE NORD</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>267</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>578</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>280</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>25</Grp_identifiant>
+      <Grp_nom>GARE SUD 1</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>74</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>268</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>1045</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>26</Grp_identifiant>
+      <Grp_nom>GARE SUD 2</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>125</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>255</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3589</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>27</Grp_identifiant>
+      <Grp_nom>GARE SUD 3</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>173</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>391</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3555</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>29</Grp_identifiant>
+      <Grp_nom>BELLAMY</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>72</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>76</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3650</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>30</Grp_identifiant>
+      <Grp_nom>CHATEAU</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>18</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>60</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3554</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>31</Grp_identifiant>
+      <Grp_nom>VIVIANI</Grp_nom>
+      <Grp_statut>5</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>113</Grp_disponible>
+      <Grp_complet>2</Grp_complet>
+      <Grp_exploitation>120</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3990</IdObj>
+   </Groupe_Parking>
+   <Groupe_Parking>
+      <Grp_identifiant>34</Grp_identifiant>
+      <Grp_nom>GARE SUD 4</Grp_nom>
+      <Grp_statut>2</Grp_statut>
+      <Grp_pri_aut>0</Grp_pri_aut>
+      <Grp_disponible>0</Grp_disponible>
+      <Grp_complet>0</Grp_complet>
+      <Grp_exploitation>0</Grp_exploitation>
+      <Grp_horodatage>13/12/2011 23:03:40</Grp_horodatage>
+      <IdObj>3989</IdObj>
+   </Groupe_Parking>
+</Groupes_Parking></data>
+	</answer>
+</opendata>
