@@ -40,15 +40,18 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".StartActivity" >
+        <activity android:name=".StartActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity" ></activity>
-		<activity android:name=".AproposActivity" ></activity>
+        <activity android:name=".SettingsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+		<activity android:name=".AproposActivity"
+		    android:configChanges="orientation|screenSize|keyboardHidden"></activity>
         <service android:name=".service.BackgroundEquipementUpdaterService" />
         <service android:name=".service.BackgroundParkingUpdaterService" />
         <service android:name=".service.BackgroundFreewaySegmentColorUpdaterService" />
