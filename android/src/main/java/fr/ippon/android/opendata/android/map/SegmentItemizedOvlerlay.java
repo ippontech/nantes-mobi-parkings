@@ -16,18 +16,15 @@
 */
 package fr.ippon.android.opendata.android.map;
 
-import android.content.Context;
-import fr.ippon.android.opendata.android.R;
-import fr.ippon.android.opendata.android.content.SegmentDao;
-import fr.ippon.android.opendata.data.traffic.Segment;
-import roboguice.util.RoboAsyncTask;
-
-import javax.inject.Inject;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import android.content.Context;
+import fr.ippon.android.opendata.android.R;
+import fr.ippon.android.opendata.data.traffic.Segment;
 
 /**
  * User: nicolasguillot

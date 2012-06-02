@@ -16,7 +16,6 @@
 */
 package fr.ippon.android.opendata.android;
 
-import java.util.prefs.Preferences;
 
 
 public enum Preference {

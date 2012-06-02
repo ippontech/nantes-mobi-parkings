@@ -16,20 +16,12 @@
 */
 package fr.ippon.android.opendata.android.map;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Point;
-import fr.ippon.android.opendata.android.MainApplication;
-import fr.ippon.android.opendata.data.traffic.IE6GeoPoint;
-import fr.ippon.android.opendata.data.traffic.Segment;
-import org.osmdroid.util.GeoPoint;
-import org.osmdroid.views.MapView;
-import org.osmdroid.views.overlay.Overlay;
 import org.osmdroid.views.overlay.PathOverlay;
 
-import java.util.List;
+import android.content.Context;
+import android.graphics.Color;
+import fr.ippon.android.opendata.data.traffic.IE6GeoPoint;
+import fr.ippon.android.opendata.data.traffic.Segment;
 
 /**
  * User: nicolasguillot

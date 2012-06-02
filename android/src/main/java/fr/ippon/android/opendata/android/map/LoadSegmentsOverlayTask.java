@@ -16,28 +16,22 @@
 */
 package fr.ippon.android.opendata.android.map;
 
+import static fr.ippon.android.opendata.android.content.convert.ColorId.getColorFromColorIndice;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.inject.Inject;
+
+import roboguice.util.RoboAsyncTask;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
-import android.graphics.Color;
-import android.nfc.Tag;
 import android.util.Log;
 import fr.ippon.android.opendata.android.MainApplication;
 import fr.ippon.android.opendata.android.content.SegmentColorTableDescription;
 import fr.ippon.android.opendata.android.content.SegmentDao;
-
-import java.util.List;
-import java.util.ArrayList;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-import fr.ippon.android.opendata.android.content.convert.ColorId;
 import fr.ippon.android.opendata.data.traffic.Segment;
-import roboguice.util.RoboAsyncTask;
-
-import javax.inject.Inject;
-
-import static fr.ippon.android.opendata.android.content.convert.ColorId.*;
 
 /**
  * User: nicolasguillot

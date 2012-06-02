@@ -18,12 +18,6 @@ package fr.ippon.android.opendata.android.content;
 
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.IDENTIFIANT;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.PARKINGS_TABLE_NAME;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import android.content.ContentProvider;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;

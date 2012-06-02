@@ -16,22 +16,18 @@
 */
 package fr.ippon.android.opendata.data.trafficfluency;
 
-import fr.ippon.android.opendata.data.trafficfluency.modele.BasicDataValue;
-import fr.ippon.android.opendata.data.trafficfluency.modele.FreewaySegmentFluency;
-import fr.ippon.android.opendata.data.trafficfluency.modele.TrafficStatus;
-import fr.ybo.opendata.nantes.exceptions.ApiReseauException;
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.assertTrue;
 
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertFalse;
-import static junit.framework.Assert.assertNotNull;
-import static junit.framework.Assert.assertNull;
-import static junit.framework.Assert.assertTrue;
 
-
-import java.util.List;
+import fr.ippon.android.opendata.data.trafficfluency.modele.FreewaySegmentFluency;
+import fr.ippon.android.opendata.data.trafficfluency.modele.TrafficStatus;
+import fr.ybo.opendata.nantes.exceptions.ApiReseauException;
 
 /**
  * User: nicolasguillot
