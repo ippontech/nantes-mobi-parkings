@@ -44,7 +44,7 @@
     <string name="settings_data">État des données</string>
     <string name="settings_data_staticrefresh_label">Liste des parkings</string>
     <string name="settings_data_staticrefresh_summary">Date de dernière mise à jour : %1$s</string>
-    <string name="settings_data_dynrefresh_label">Disponibilités des parkings</string>
+    <string name="settings_data_dynrefresh_label">Places libres</string>
     <string name="settings_data_dynrefresh_summary">Heure de dernière mise à jour : %1$s</string>
 	<string name="settings_show_traffic">Afficher la circulation ?</string>
 	<string name="settings_show_traffic_summary">Afficher l\'état de la circulation</string>
