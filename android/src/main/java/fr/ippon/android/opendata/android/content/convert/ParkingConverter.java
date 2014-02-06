@@ -17,6 +17,9 @@
 package fr.ippon.android.opendata.android.content.convert;
 
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.DISPONIBLES;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.NOM;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LATITUDE;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LONGITUDE;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.IDENTIFIANT;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.ID_OBJ;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LAST_UPDATE;
@@ -52,7 +55,7 @@ public class ParkingConverter implements ContentValueConverter<Parking> {
 
 		cv.put(IDENTIFIANT, park.getIdentifiant());
 		// Inutile de mettre a jour le nom (données statiques)
-		// cv.put(NOM, park.getNom());
+		cv.put(NOM, park.getNom());
 		cv.put(STATUS, park.getStatut().getValue());
 		cv.put(PRIORITE, park.getPriorite());
 		cv.put(DISPONIBLES, park.getDisponibles());
@@ -63,8 +66,8 @@ public class ParkingConverter implements ContentValueConverter<Parking> {
 		}
 		cv.put(ID_OBJ, park.getIdObj());
 		// Inutile de mettre a jour la lat/long (données statiques)
-		// cv.put(LATITUDE, park.getLatitude());
-		// cv.put(LONGITUDE, park.getLongitude());
+		cv.put(LATITUDE, park.getLatitude());
+		cv.put(LONGITUDE, park.getLongitude());
 
 		return cv;
 	}
