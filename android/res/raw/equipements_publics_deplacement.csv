@@ -218,3 +218,8 @@ _IDOBJ;NOM_COMPLET;THEME;LIBTHEME;CATEGORIE;LIBCATEGORIE;TYPE;LIBTYPE;STATUT;COM
 3763;77 Station Accueil Ecole d'Architecture;10;DEPLACEMENT;1003;Transport partagé;100301;Bicloo;;NANTES;Quai François Mitterrand;;www.bicloo.nantesmetropole.fr;44200;-1,5575512597;47,207616902;;;;;
 4036;Station Zola;10;DEPLACEMENT;1003;Transport partagé;100302;Marguerite;;NANTES;Rue des Renardières;;;44100;-1,5863462041;47,2138994604;;;;;
 3227;Parc relais tram Plaisance;10;DEPLACEMENT;1002;Parc Relais;100203;Libre;;ST-HERBLAIN;Route de Vannes;;;44800;-1,593440524;47,240532662;Accès libre permanent.;2;;;5
+4320;Parking ouvrage Feydeau;10;DEPLACEMENT;1001;Parking Ouvrage;100101;Souterrain;;NANTES;Parvis Neptune;;;44000;-1,552559;47,214075;;;;;
+4142;Parc en enclos Baco-LU 1 côté gare;10;DEPLACEMENT;1005;Parc en Enclos;;;;NANTES;Allée Baco;02 51 84 94 51;www.parkings-nantes.fr;44000;-1,548989;47,214332;;;;;
+4073;Parc en enclos Gloriette 2;10;DEPLACEMENT;1005;Parc en Enclos;;;;NANTES;Rue Albert de Mun;02 51 84 94 51;www.parkings-nantes.fr;44000;-1,560284;47,210274;;;;;
+4072;Parc en enclos Chantiers Navals;10;DEPLACEMENT;1005;Parc en Enclos;;;;NANTES;Quai de la Fosse;02 51 84 94 51;www.parkings-nantes.fr;44100;-1,568916;47.208289;;;;;
+4319;Parc en enclos Les Fonderies;10;DEPLACEMENT;1005;Parc en Enclos;;;;NANTES;Rue de la Porte Gellée;;;44200;-1,544333;47.20497;;;;;
