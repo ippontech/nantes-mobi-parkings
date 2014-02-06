@@ -74,7 +74,7 @@ public class CustomMapView extends MapView implements MapListener {
 		RoboInjector injector = RoboGuice.getInjector(context);
 		injector.injectMembersWithoutViews(this);
 
-		setTileSource(TileSourceFactory.MAPNIK);
+		setTileSource(TileSourceFactory.MAPQUESTOSM);
 		setBuiltInZoomControls(true);
 		setMultiTouchControls(true);
 		setMapListener(this);
