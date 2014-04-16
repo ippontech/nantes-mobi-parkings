@@ -39,6 +39,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.github.rtyley.android.sherlock.roboguice.fragment.RoboSherlockFragment;
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.Fields;
+import com.google.analytics.tracking.android.MapBuilder;
+import com.google.analytics.tracking.android.Tracker;
 
 import fr.ippon.android.opendata.android.MainApplication;
 import fr.ippon.android.opendata.android.Preference;
@@ -57,6 +61,8 @@ public class MapFragment extends RoboSherlockFragment {
 	ContentResolver contentResolver;
 
 	CustomMapView mapView;
+	
+	private Tracker mTracker;
 
 	private MyLocationOverlay myLocation = null;
 
@@ -96,6 +102,8 @@ public class MapFragment extends RoboSherlockFragment {
             	 if (selectedParking != null)
 
                  {
+            		 mTracker.send(MapBuilder.createEvent("Navigation vers parking", "Navigation vers parking",
+     						"Navigation vers parking - " + String.valueOf(selectedParking.getNom()), null).build());
                      String latitude = String.valueOf(selectedParking.getLatitude());
                      String longitude = String.valueOf(selectedParking.getLongitude());
                      Intent navigation = new Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q=" + latitude + "," + longitude));
@@ -137,6 +145,23 @@ public class MapFragment extends RoboSherlockFragment {
 
 		return view;
 	}
+	
+
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        mTracker = EasyTracker.getInstance(getActivity());
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        mTracker.set(Fields.SCREEN_NAME, "Carte des parkings");
+        mTracker.send(MapBuilder.createAppView().build());
+    }
 
 	public void onResume() {
 		Log.d(TAG, "onResume");

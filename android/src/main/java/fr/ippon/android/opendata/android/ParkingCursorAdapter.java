@@ -32,6 +32,11 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.MapBuilder;
+import com.google.analytics.tracking.android.Tracker;
+
 import fr.ippon.android.opendata.data.distance.GpsPoint;
 import fr.ippon.android.opendata.data.parkings.ParkingEntity;
 import fr.ippon.android.opendata.data.parkings.ParkingUtils;
@@ -52,6 +57,8 @@ class ParkingCursorAdapter extends CursorAdapter {
 	 * Lien vers l'activité qui manage les Cursor.
 	 */
 	private final StartActivity activity;
+	
+
 
 	private Map<String, String> mapLabels;
 
@@ -63,7 +70,7 @@ class ParkingCursorAdapter extends CursorAdapter {
 				FLAG_REGISTER_CONTENT_OBSERVER);
 		this.fragment = fragment;
 		this.activity = (StartActivity) fragment.getActivity();
-
+		
 		// Chargement des libellés
 		mapLabels = new HashMap<String, String>();
 		mapLabels.put("SUBSCRIBE_ONLY",
@@ -148,6 +155,8 @@ class ParkingCursorAdapter extends CursorAdapter {
 
 	class StarOnCheckedChangeListener implements OnCheckedChangeListener {
 
+		
+		private Tracker mTracker;
 		/**
 		 * {@inheritDoc}
 		 */
@@ -158,6 +167,9 @@ class ParkingCursorAdapter extends CursorAdapter {
 					if (isChecked) {
 						activity.favorisDao.addFavori(activity,
 								holder.currentPark);
+						mTracker = EasyTracker.getInstance(mContext);
+						mTracker.send(MapBuilder.createEvent("Ajout Favoris", "Ajout Favoris",
+								"Ajout Favoris Parking - " + holder.currentPark.getNom(), null).build());
 					} else {
 						activity.favorisDao.removeFavori(activity,
 								holder.currentPark);
@@ -172,6 +184,9 @@ class ParkingCursorAdapter extends CursorAdapter {
 		/**
 		 * {@inheritDoc}
 		 */
+		private Tracker mTracker;
+		
+		
 		public void onClick(View view) {
 			final int position = fragment.getListView()
 					.getPositionForView(view);
@@ -179,6 +194,9 @@ class ParkingCursorAdapter extends CursorAdapter {
 				fragment.getListView().setItemChecked(position, true);
 				ParkingViewHolder holder = (ParkingViewHolder) view.getTag();
 				activity.showMap(holder.currentPark);
+				mTracker = EasyTracker.getInstance(mContext);
+				mTracker.send(MapBuilder.createEvent("Consultation parking", "Consultation parking",
+						"Parking - " + holder.currentPark.getNom(), null).build());
 			}
 		}
 	};

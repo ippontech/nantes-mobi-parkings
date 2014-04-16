@@ -16,6 +16,10 @@
 */
 package fr.ippon.android.opendata.android;
 
+import javax.inject.Inject;
+
+import roboguice.fragment.RoboListFragment;
+import roboguice.inject.InjectResource;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -29,17 +33,20 @@ import android.support.v4.content.Loader;
 import android.support.v4.widget.CursorAdapter;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.*;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.View.OnKeyListener;
 import android.view.View.OnTouchListener;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import roboguice.fragment.RoboListFragment;
-import roboguice.inject.InjectResource;
 
-import javax.inject.Inject;
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.Tracker;
 
 /**
  * Version abstraite d'un Fragment qui prend en charge l'affichage d'une liste

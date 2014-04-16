@@ -16,6 +16,7 @@
 */
 package fr.ippon.android.opendata.android;
 
+
 import roboguice.inject.InjectView;
 import android.os.Bundle;
 import android.text.Html;
@@ -28,6 +29,10 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.github.rtyley.android.sherlock.roboguice.activity.RoboSherlockActivity;
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.Fields;
+import com.google.analytics.tracking.android.MapBuilder;
+import com.google.analytics.tracking.android.Tracker;
 
 /**
  * Affiche la vue "A Propos"
@@ -57,6 +62,8 @@ public class AproposActivity extends RoboSherlockActivity {
 	@InjectView(R.id.apropos_fonctionnalite_a_venir)
 	private TextView apropos_fonctionnalite_a_venir;
 
+	
+	private Tracker mTracker;
 	/**
 	 * {@inheritDoc}
 	 */
@@ -65,6 +72,9 @@ public class AproposActivity extends RoboSherlockActivity {
 		Log.d(TAG, "onCreate");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.apropos);
+		
+		//tracker GA
+		mTracker = EasyTracker.getInstance(AproposActivity.this);
 
 		final ActionBar ab = getSupportActionBar();
 		ab.setDisplayHomeAsUpEnabled(showHomeUp);
@@ -92,6 +102,15 @@ public class AproposActivity extends RoboSherlockActivity {
 				.setText(extractHtml(R.string.apropos_fonctionnalite_a_venir));
 
 	}
+	
+	@Override
+    public void onStart() {
+        super.onStart();
+
+        mTracker.set(Fields.SCREEN_NAME, "A propos");
+        mTracker.send(MapBuilder.createAppView().build());
+        
+    }
 
 	private Spanned extractHtml(int resourceId) {
 		return Html.fromHtml(getResources().getString(resourceId));

@@ -37,6 +37,7 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.github.rtyley.android.sherlock.roboguice.activity.RoboSherlockFragmentActivity;
+import com.google.analytics.tracking.android.EasyTracker;
 
 import fr.ippon.android.opendata.android.content.FavorisDao;
 import fr.ippon.android.opendata.android.content.ParkingDao;
@@ -81,6 +82,7 @@ public class StartActivity extends RoboSherlockFragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		
 		// Branchement des systemes de geo-loc
 		locationDispatcher.registerGpsUpdate();
 

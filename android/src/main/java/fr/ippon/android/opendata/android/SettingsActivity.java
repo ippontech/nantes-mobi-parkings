@@ -22,15 +22,22 @@ import java.util.Date;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.github.rtyley.android.sherlock.roboguice.activity.RoboSherlockPreferenceActivity;
-
 import roboguice.inject.InjectView;
 import android.content.ContentResolver;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+import com.github.rtyley.android.sherlock.roboguice.activity.RoboSherlockPreferenceActivity;
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.Fields;
+import com.google.analytics.tracking.android.GoogleAnalytics;
+import com.google.analytics.tracking.android.Logger.LogLevel;
+import com.google.analytics.tracking.android.MapBuilder;
+import com.google.analytics.tracking.android.Tracker;
+
 import fr.ippon.android.opendata.android.content.ParkingDao;
 import fr.ippon.android.opendata.android.service.EquipementManagerAndroid;
 
@@ -59,11 +66,16 @@ public class SettingsActivity extends RoboSherlockPreferenceActivity {
 	
 	private boolean useLogo = true;
     private boolean showHomeUp = true;
+    
+    private Tracker mTracker;
 
+    
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		
+	    mTracker = EasyTracker.getInstance(SettingsActivity.this);
+		
 		// Affichage de notre vue custom
 		setContentView(R.layout.settings);
 		
@@ -137,4 +149,15 @@ public class SettingsActivity extends RoboSherlockPreferenceActivity {
 		}
 		return lastUpdateData;
 	}
+	
+   
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        mTracker.set(Fields.SCREEN_NAME, "Préférences");
+        mTracker.send(MapBuilder.createAppView().build());
+        
+    }
 }

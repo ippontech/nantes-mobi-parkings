@@ -28,17 +28,26 @@ import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v4.widget.CursorAdapter;
 
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.Fields;
+import com.google.analytics.tracking.android.GoogleAnalytics;
+import com.google.analytics.tracking.android.Logger.LogLevel;
+import com.google.analytics.tracking.android.MapBuilder;
+import com.google.analytics.tracking.android.Tracker;
+
 /**
  * Activité qui affiche la liste des parkings complête.
  * 
  * @author Damien Raude-Morvan
  */
 public class MainListFragment extends AbstractParkingListFragment {
-
+	
+	private Tracker mTracker;
+	
 	public MainListFragment() {
 		super(R.string.list_parking_empty_download);
 	}
-
+	
 	/**
 	 * {@inheritDoc}
 	 */
@@ -77,4 +86,24 @@ public class MainListFragment extends AbstractParkingListFragment {
 	protected CursorAdapter createAdapter() {
 		return new ParkingCursorAdapter(this);
 	}
+	
+	
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mTracker = EasyTracker.getInstance(getActivity());
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        mTracker.set(Fields.SCREEN_NAME, "Liste des parkings");
+        mTracker.send(MapBuilder.createAppView().build());
+        
+        GoogleAnalytics.getInstance(getActivity()).getLogger()
+        .setLogLevel(LogLevel.VERBOSE);
+    }
+    
 }
