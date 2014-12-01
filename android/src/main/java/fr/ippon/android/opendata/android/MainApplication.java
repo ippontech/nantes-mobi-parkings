@@ -16,6 +16,7 @@
 */
 package fr.ippon.android.opendata.android;
 
+import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -23,6 +24,12 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.util.Log;
+
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.Tracker;
+import com.google.android.gms.analytics.Logger.LogLevel;
+
 
 /**
  * Classe de démarrage de l'application. Permet de récupérer un pointeur
@@ -33,7 +40,7 @@ import android.preference.PreferenceManager;
 public class MainApplication extends Application {
 
 	private static Context context;
-
+	
 	private static final String TAG = MainApplication.class.getName();
 
 	/**
@@ -42,6 +49,12 @@ public class MainApplication extends Application {
 	 */
 	public final static ExecutorService executor = Executors.newSingleThreadExecutor();
 
+	public enum TrackerName {
+		APP_TRACKER, // Tracker used only in this app.
+	}
+
+	HashMap<TrackerName, Tracker> mTrackers = new HashMap<TrackerName, Tracker>();
+	
 	public void onCreate() {
 		context = this.getApplicationContext();
 
@@ -77,5 +90,22 @@ public class MainApplication extends Application {
 		String defaultValue = pref.getDefaultValue();
 		String actualValue = prefs.getString(pref.getKey(), defaultValue);
 		return actualValue;
+	}
+	
+	/**
+	 * 
+	 * retourne le tracker (créé la première fois)
+	 * 
+	 */
+	synchronized Tracker getTracker() {
+		if (!mTrackers.containsKey(TrackerName.APP_TRACKER)) {
+
+			GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
+			analytics.getLogger().setLogLevel(LogLevel.VERBOSE);
+			Tracker t = analytics.newTracker(R.xml.app_tracker);
+			mTrackers.put(TrackerName.APP_TRACKER, t);
+
+		}
+		return mTrackers.get(TrackerName.APP_TRACKER);
 	}
 }

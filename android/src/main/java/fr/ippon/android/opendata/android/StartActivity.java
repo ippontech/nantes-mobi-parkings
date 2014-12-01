@@ -37,7 +37,6 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.github.rtyley.android.sherlock.roboguice.activity.RoboSherlockFragmentActivity;
-import com.google.analytics.tracking.android.EasyTracker;
 
 import fr.ippon.android.opendata.android.content.FavorisDao;
 import fr.ippon.android.opendata.android.content.ParkingDao;

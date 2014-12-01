@@ -19,6 +19,9 @@ package fr.ippon.android.opendata.android;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.location.Location;
@@ -32,11 +35,6 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
-
 import fr.ippon.android.opendata.data.distance.GpsPoint;
 import fr.ippon.android.opendata.data.parkings.ParkingEntity;
 import fr.ippon.android.opendata.data.parkings.ParkingUtils;
@@ -111,6 +109,8 @@ class ParkingCursorAdapter extends CursorAdapter {
 
 		return view;
 	}
+	
+	
 
 	/**
 	 * {@inheritDoc}
@@ -155,8 +155,6 @@ class ParkingCursorAdapter extends CursorAdapter {
 
 	class StarOnCheckedChangeListener implements OnCheckedChangeListener {
 
-		
-		private Tracker mTracker;
 		/**
 		 * {@inheritDoc}
 		 */
@@ -167,9 +165,14 @@ class ParkingCursorAdapter extends CursorAdapter {
 					if (isChecked) {
 						activity.favorisDao.addFavori(activity,
 								holder.currentPark);
-						mTracker = EasyTracker.getInstance(mContext);
-						mTracker.send(MapBuilder.createEvent("Ajout Favoris", "Ajout Favoris",
-								"Ajout Favoris Parking - " + holder.currentPark.getNom(), null).build());
+						
+				        // Get tracker.
+				        Tracker mTracker = ((MainApplication) activity.getApplication()).getTracker();
+				        
+				        // Envoi d'un evenement
+				        mTracker.send(new HitBuilders.EventBuilder("Ajout Favoris",
+								"Ajout Favoris Parking - " + holder.currentPark.getNom()).build()); 
+
 					} else {
 						activity.favorisDao.removeFavori(activity,
 								holder.currentPark);
@@ -184,7 +187,6 @@ class ParkingCursorAdapter extends CursorAdapter {
 		/**
 		 * {@inheritDoc}
 		 */
-		private Tracker mTracker;
 		
 		
 		public void onClick(View view) {
@@ -194,9 +196,14 @@ class ParkingCursorAdapter extends CursorAdapter {
 				fragment.getListView().setItemChecked(position, true);
 				ParkingViewHolder holder = (ParkingViewHolder) view.getTag();
 				activity.showMap(holder.currentPark);
-				mTracker = EasyTracker.getInstance(mContext);
-				mTracker.send(MapBuilder.createEvent("Consultation parking", "Consultation parking",
-						"Parking - " + holder.currentPark.getNom(), null).build());
+				
+
+		        // Get tracker.
+		        Tracker mTracker = ((MainApplication) activity.getApplication()).getTracker();
+		        
+		        // Envoi d'un evenement
+		        mTracker.send(new HitBuilders.EventBuilder("Consultation parking",
+						"Parking - " + holder.currentPark.getNom()).build()); 
 			}
 		}
 	};
@@ -209,4 +216,6 @@ class ParkingCursorAdapter extends CursorAdapter {
 		TextView distance;
 		ParkingEntity currentPark;
 	}
+	
+	
 }

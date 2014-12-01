@@ -45,9 +45,6 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.Tracker;
-
 /**
  * Version abstraite d'un Fragment qui prend en charge l'affichage d'une liste
  * de parkings.

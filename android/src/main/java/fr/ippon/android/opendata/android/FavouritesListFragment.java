@@ -22,17 +22,16 @@ import static fr.ippon.android.opendata.android.content.ParkingsTableDescription
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LONGITUDE;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.NOM;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.PROJECTION_ALL;
+
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 import android.database.Cursor;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v4.widget.CursorAdapter;
-
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.Fields;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
 
 /**
  * Activité qui affiche la liste des mis en favoris
@@ -86,21 +85,20 @@ public class FavouritesListFragment extends AbstractParkingListFragment {
 		return new ParkingCursorAdapter(this);
 	}
 	
-	private Tracker mTracker;
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        mTracker = EasyTracker.getInstance(getActivity());
-    }
 
     @Override
     public void onStart() {
         super.onStart();
+        
+        // Get tracker.
+        Tracker t = ((MainApplication) this.getActivity().getApplication()).getTracker();
 
-        mTracker.set(Fields.SCREEN_NAME, "Liste parking favoris");
-        mTracker.send(MapBuilder.createAppView().build());
+        // Set screen name.
+        t.setScreenName("Liste parking favoris");
+
+        // Send a screen view.
+        t.send(new HitBuilders.AppViewBuilder().build());       
+
     }
 
 }

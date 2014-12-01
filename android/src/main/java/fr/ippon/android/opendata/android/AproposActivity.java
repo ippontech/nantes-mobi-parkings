@@ -29,10 +29,9 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.github.rtyley.android.sherlock.roboguice.activity.RoboSherlockActivity;
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.Fields;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+import com.google.android.gms.analytics.GoogleAnalytics;
 
 /**
  * Affiche la vue "A Propos"
@@ -63,7 +62,6 @@ public class AproposActivity extends RoboSherlockActivity {
 	private TextView apropos_fonctionnalite_a_venir;
 
 	
-	private Tracker mTracker;
 	/**
 	 * {@inheritDoc}
 	 */
@@ -73,9 +71,6 @@ public class AproposActivity extends RoboSherlockActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.apropos);
 		
-		//tracker GA
-		mTracker = EasyTracker.getInstance(AproposActivity.this);
-
 		final ActionBar ab = getSupportActionBar();
 		ab.setDisplayHomeAsUpEnabled(showHomeUp);
 		ab.setDisplayUseLogoEnabled(useLogo);
@@ -107,10 +102,18 @@ public class AproposActivity extends RoboSherlockActivity {
     public void onStart() {
         super.onStart();
 
-        mTracker.set(Fields.SCREEN_NAME, "A propos");
-        mTracker.send(MapBuilder.createAppView().build());
-        
+        // Get tracker.
+        Tracker t = ((MainApplication) this.getApplication()).getTracker();
+
+        // Set screen name.
+        t.setScreenName("A propos");
+
+        // Send a screen view.
+        t.send(new HitBuilders.AppViewBuilder().build());       
     }
+	
+	
+
 
 	private Spanned extractHtml(int resourceId) {
 		return Html.fromHtml(getResources().getString(resourceId));
