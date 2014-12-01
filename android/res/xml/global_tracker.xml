@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
+
+<!-- the Local LogLevel for Analytics -->
+<string name="ga_logLevel">info</string>
+
+<!-- how often the dispatcher should fire -->
+<integer name="ga_dispatchPeriod">10</integer>
+
+<!-- Treat events as test events and don't send to google -->
+<bool name="ga_dryRun">false</bool>
+
+<!-- The screen names that will appear in reports -->
+<string name="fr.ippon.android.opendata.android.MainApplication">Main Application</string>
+<string name="fr.ippon.android.opendata.android.AProposActivity">A propos</string>
+
+<string name="ga_trackingId">UA-53153224-2</string>
+
+</resources>
