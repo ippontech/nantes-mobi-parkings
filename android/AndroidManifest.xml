@@ -34,7 +34,6 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:debuggable="true"
         android:name=".MainApplication"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
@@ -63,6 +62,11 @@
         <provider
                 android:name=".content.SegmentColorContentProvider"
                 android:authorities="fr.ippon.android.opendata.android.content.segments_color" />
+    
+    	<!-- Google Analytics Version v4 needs this value for easy tracking -->
+		<meta-data android:name="com.google.android.gms.analytics.globalConfigResource"
+		android:resource="@xml/global_tracker" />
+    
     </application>
 
 </manifest>
