@@ -40,7 +40,8 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".StartActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden">
+            android:configChanges="orientation|screenSize|keyboardHidden"            
+    		android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
