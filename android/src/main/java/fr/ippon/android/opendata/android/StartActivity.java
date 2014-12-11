@@ -28,6 +28,7 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -194,7 +195,7 @@ public class StartActivity extends RoboSherlockFragmentActivity {
 
 	/**
 	 * Permet d'afficher des messages / de changer des éléments graphiques
-	 * lorsque certains traitements changes de status.
+	 * lorsque certains traitements changent de status.
 	 * 
 	 * @author Damien Raude-Morvan
 	 */
@@ -235,6 +236,11 @@ public class StartActivity extends RoboSherlockFragmentActivity {
 			                refreshItem.setActionView(refreshIndeterminateProgressView);
 						} else {
 			                refreshItem.setActionView(null);
+			                // si le rafraichissement a été lancé par un scroll sur la liste, on vire l'icone
+			                SwipeRefreshLayout swipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+			                if (swipeLayout != null) { 
+			                	swipeLayout.setRefreshing(false);
+			                }
 			                ServiceStatusReceiver.this.toastIfError(intent);
 			            }
 			        }

@@ -96,9 +96,6 @@ public class MainListFragment extends AbstractParkingListFragment {
 
         // Send a screen view.
         t.send(new HitBuilders.AppViewBuilder().build());  
-        
-//        GoogleAnalytics.getInstance(getActivity()).getLogger()
-//        .setLogLevel(LogLevel.VERBOSE);
     }
     
 }

@@ -31,6 +31,8 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v4.widget.CursorAdapter;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -80,6 +82,8 @@ public abstract class AbstractParkingListFragment extends RoboListFragment
 
 	private boolean hasSearched = false;
 
+	private SwipeRefreshLayout swipeLayout;
+
 	public AbstractParkingListFragment(int emptyTextResource) {
 		super();
 		this.emptyTextResource = emptyTextResource;
@@ -122,6 +126,11 @@ public abstract class AbstractParkingListFragment extends RoboListFragment
 				null);
 		emptyText = (TextView) r.findViewById(android.R.id.empty);
 		headerView = inflater.inflate(R.layout.items_parkings_header, null);
+		
+		// rafraichissement par "swipe"
+		swipeLayout = (SwipeRefreshLayout) r.findViewById(R.id.swipe_container);
+	    swipeLayout.setOnRefreshListener(swipeLayoutRefreshListener);
+	   
 
 		// Branchement du listener sur les preferences
 		SharedPreferences prefs = PreferenceManager
@@ -137,7 +146,7 @@ public abstract class AbstractParkingListFragment extends RoboListFragment
 
 	private void configureSearchField(RelativeLayout r) {
 		final AbstractParkingListFragment loaderCallBack = this;
-		searchField = (EditText) r.findViewById(R.id.searchField);
+		searchField = (EditText) r.findViewById(R.id.search_field);
 
 		if (TextUtils.isEmpty(searchField.getText()))
 			searchField.setText(searchHint);
@@ -278,6 +287,14 @@ public abstract class AbstractParkingListFragment extends RoboListFragment
 				getLoaderManager().restartLoader(0, null,
 						AbstractParkingListFragment.this);
 			}
+		}
+	};
+	
+	private OnRefreshListener swipeLayoutRefreshListener = new OnRefreshListener() {
+		
+		@Override
+		public void onRefresh() {
+			MenuHandler.requestRefresh(getActivity());
 		}
 	};
 

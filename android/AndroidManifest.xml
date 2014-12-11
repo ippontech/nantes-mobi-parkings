@@ -21,7 +21,7 @@
     android:versionCode="4"
     android:versionName="1.1-SNAPSHOT" >
 
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15" />
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="20" />
 
     <!-- Téléchargement du fond de carte -->
     <uses-permission android:name="android.permission.INTERNET" />
