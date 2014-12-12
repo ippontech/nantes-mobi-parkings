@@ -26,6 +26,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.ContentObserver;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -40,6 +41,7 @@ import android.widget.TextView;
 
 import com.github.rtyley.android.sherlock.roboguice.fragment.RoboSherlockFragment;
 
+import fr.ippon.android.opendata.android.LocationChangeDispatcher;
 import fr.ippon.android.opendata.android.MainApplication;
 import fr.ippon.android.opendata.android.Preference;
 import fr.ippon.android.opendata.android.R;
@@ -55,6 +57,9 @@ public class MapFragment extends RoboSherlockFragment {
 
 	@Inject
 	ContentResolver contentResolver;
+
+	@Inject
+	LocationChangeDispatcher locationDispatcher;
 
 	CustomMapView mapView;
 	
@@ -112,6 +117,7 @@ public class MapFragment extends RoboSherlockFragment {
 		mapView.setDescriptionItems(ovlerayDescr, descrLayout);
 
 		// Ajout de la position courante de l'utilisateur
+		final Location currentLocation = locationDispatcher.getLastKnownLocation();
 		myLocation = new MyLocationOverlay(getActivity(), mapView);
 		mapView.getOverlays().add(myLocation);
 
@@ -130,8 +136,16 @@ public class MapFragment extends RoboSherlockFragment {
 
 			mc.setZoom(18);
 			mc.setCenter(point);
+		} else if (currentLocation != null) {
+			// c'est là qu'on va changer la carte par défaut
+			int latitude = (int) (currentLocation.getLatitude() * 1E6);
+			int longitude = (int) (currentLocation.getLongitude() * 1E6);
+			GeoPoint point = new GeoPoint(latitude, longitude);
+			
+			mc.setZoom(17);
+			mc.setCenter(point);
 		} else {
-			mc.setZoom(13);
+			mc.setZoom(15);
 			mc.setCenter(nantes);
 		}
 

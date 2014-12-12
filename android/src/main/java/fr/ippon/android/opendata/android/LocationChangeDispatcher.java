@@ -91,7 +91,7 @@ public class LocationChangeDispatcher implements LocationListener {
 	 * 
 	 * @return Dernière localisation connue (ou rien, en mode avion par exemple)
 	 */
-	protected Location getLastKnownLocation() {
+	public Location getLastKnownLocation() {
 		Criteria criteres = new Criteria();
 		criteres.setAccuracy(Criteria.ACCURACY_FINE);
 		boolean enabledOnly = true;
