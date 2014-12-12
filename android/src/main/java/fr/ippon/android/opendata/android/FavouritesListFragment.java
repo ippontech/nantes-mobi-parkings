@@ -17,10 +17,7 @@
 package fr.ippon.android.opendata.android;
 
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.CONTENT_URI;
-import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.DISPONIBLES;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.FAVORI;
-import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LATITUDE;
-import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LONGITUDE;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.NOM;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.PROJECTION_ALL;
 
@@ -28,7 +25,6 @@ import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
 import android.database.Cursor;
-import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;

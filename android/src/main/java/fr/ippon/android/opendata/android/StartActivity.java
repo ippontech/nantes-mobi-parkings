@@ -16,6 +16,10 @@
 */
 package fr.ippon.android.opendata.android;
 
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.CONTENT_URI;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.FAVORI;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.NOM;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.PROJECTION_ALL;
 import static fr.ippon.android.opendata.android.service.ServiceStatus.SERVICE_FINISHED;
 import static fr.ippon.android.opendata.android.service.ServiceStatus.SERVICE_RUNNING;
 
@@ -26,6 +30,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -128,6 +133,11 @@ public class StartActivity extends RoboSherlockFragmentActivity {
 						new TabListener<FavouritesListFragment>(this,
 								"favoris", FavouritesListFragment.class));
 		actionBar.addTab(tab);
+		
+		// si on a des favoris, démarrage sur l'onglet "favoris"
+		if (parkingDao.hasFavoris(getContentResolver())) {
+			actionBar.setSelectedNavigationItem(2);
+		}
 		
 		// Lancement des services
 		DataRefreshManager.requestRefresh(this, true);

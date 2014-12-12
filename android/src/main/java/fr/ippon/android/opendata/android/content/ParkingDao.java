@@ -18,6 +18,7 @@ package fr.ippon.android.opendata.android.content;
 
 import static android.provider.BaseColumns._ID;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.CONTENT_URI;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.FAVORI;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.ID_OBJ;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LAST_UPDATE;
 
@@ -26,7 +27,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import fr.ippon.android.opendata.data.parkings.ParkingEntity;
-
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -161,5 +161,16 @@ public class ParkingDao implements Dao<ParkingEntity, Long> {
 
 		return date;
 	}
+	
+	/**
+	 * retourne true si au moins un favori dans la liste
+	 */
+	public boolean hasFavoris(ContentResolver resolver) {
+		Cursor cursor = resolver.query(CONTENT_URI, new String[] { _ID }, FAVORI + " = ?", new String[] { "1" }, null);
+		boolean hasFavoris = cursor.moveToFirst();
+		cursor.close();
+		return hasFavoris;
+	}
+	
 
 }
