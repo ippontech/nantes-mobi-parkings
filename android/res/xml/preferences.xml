@@ -39,9 +39,11 @@
         android:title="@string/settings_hide_parkings" />
 	
     -->
-    <CheckBoxPreference
+    <SwitchPreference
         android:defaultValue="false"
         android:key="show_traffic"
+        android:switchTextOff="Non"
+        android:switchTextOn="Oui"
         android:summary="@string/settings_show_traffic_summary"
         android:title="@string/settings_show_traffic" />
 
