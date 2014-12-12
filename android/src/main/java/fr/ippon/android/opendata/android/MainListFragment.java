@@ -20,6 +20,7 @@ import static fr.ippon.android.opendata.android.content.ParkingsTableDescription
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LATITUDE;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LONGITUDE;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.NOM;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.DISPONIBLES;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.PROJECTION_ALL;
 
 import com.google.android.gms.analytics.HitBuilders;
@@ -55,23 +56,10 @@ public class MainListFragment extends AbstractParkingListFragment {
 			buffer.append(") GLOB ?");
 			selectionArgs = new String[] { "*"
 					+ queryText.toString().toUpperCase() + "*" };
-		}
-
-		String orderBy = null;
-		String sort = MainApplication.getDefaultSort();
-		if ("NAME".equals(sort)) {
-			orderBy = NOM + " ASC";
-		} else {
-			final Location currentLocation = locationDispatcher.getLastKnownLocation();
-			// La location peut être null (pas de GPS par exemple)
-			if (currentLocation != null) {
-				orderBy = String.format(" ( abs(" + LATITUDE + " - (%s)) + abs("
-					+ LONGITUDE + " - (%s) )) ", currentLocation.getLatitude(), currentLocation.getLongitude());
-			}
-		}
+		}		
 
 		return new CursorLoader(getActivity(), CONTENT_URI, PROJECTION_ALL,
-				buffer.toString(), selectionArgs, orderBy);
+				buffer.toString(), selectionArgs, getOrderBy());
 	}
 
 	/**

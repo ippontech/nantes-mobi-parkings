@@ -30,10 +30,12 @@
     <string-array name="settings_default_sort_labels">
         <item>Nom</item>
         <item>Distance</item>
+        <item>Places disponibles</item>
     </string-array>
     <string-array name="settings_default_sort_ids">
         <item>NAME</item>
         <item>DISTANCE</item>
+        <item>DISPONIBLES</item>
     </string-array>
 
     <string name="settings_default_sort">Tri</string>

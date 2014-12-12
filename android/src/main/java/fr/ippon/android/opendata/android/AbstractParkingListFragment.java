@@ -16,6 +16,11 @@
 */
 package fr.ippon.android.opendata.android;
 
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.DISPONIBLES;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LATITUDE;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LONGITUDE;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.NOM;
+
 import javax.inject.Inject;
 
 import roboguice.fragment.RoboListFragment;
@@ -267,6 +272,26 @@ public abstract class AbstractParkingListFragment extends RoboListFragment
 
 		}
 	};
+	
+	protected String getOrderBy() {
+		String orderBy = null;
+		String sort = MainApplication.getDefaultSort();
+		if ("NAME".equals(sort)) {
+			orderBy = NOM + " ASC";
+		} else if ("DISPONIBLES".equals(sort)) {
+			orderBy = DISPONIBLES + " DESC";		
+		} else {
+			final Location currentLocation = locationDispatcher.getLastKnownLocation();
+			// La location peut être null (pas de GPS par exemple)
+			if (currentLocation != null) {
+				orderBy = String.format(" ( abs(" + LATITUDE + " - (%s)) + abs("
+					+ LONGITUDE + " - (%s) )) ", currentLocation.getLatitude(), currentLocation.getLongitude());
+			}
+		}
+		return orderBy;
+	}
+	
+	
 
 	protected LocationListener locationListener = new LocationListener() {
 
@@ -290,8 +315,7 @@ public abstract class AbstractParkingListFragment extends RoboListFragment
 		}
 	};
 	
-	private OnRefreshListener swipeLayoutRefreshListener = new OnRefreshListener() {
-		
+	private OnRefreshListener swipeLayoutRefreshListener = new OnRefreshListener() {		
 		@Override
 		public void onRefresh() {
 			MenuHandler.requestRefresh(getActivity());

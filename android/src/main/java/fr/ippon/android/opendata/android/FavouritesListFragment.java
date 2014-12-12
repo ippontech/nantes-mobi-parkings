@@ -17,6 +17,7 @@
 package fr.ippon.android.opendata.android;
 
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.CONTENT_URI;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.DISPONIBLES;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.FAVORI;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LATITUDE;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LONGITUDE;
@@ -59,22 +60,9 @@ public class FavouritesListFragment extends AbstractParkingListFragment {
 					"*" + queryText.toString().toUpperCase() + "*" };
 		}
 
-		String orderBy = null;
-		String sort = MainApplication.getDefaultSort();
-		if ("NAME".equals(sort)) {
-			orderBy = NOM + " ASC";
-		} else {
-			final Location currentLocation = locationDispatcher.getLastKnownLocation();
-			// La location peut être null (pas de GPS par exemple)
-			if (currentLocation != null) {
-				orderBy = String.format(" ( abs(" + LATITUDE + " - (%s)) + abs("
-					+ LONGITUDE + " - (%s) )) ", currentLocation.getLatitude(), currentLocation.getLongitude());
-			}
-		}
-
 		return new CursorLoader(getActivity(), CONTENT_URI, PROJECTION_ALL,
 				buffer == null ? null : buffer.toString(), selectionArgs,
-				orderBy);
+				getOrderBy());
 	}
 
 	/**
