@@ -68,9 +68,7 @@ public class SettingsActivity extends RoboSherlockPreferenceActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-//	    mTracker = EasyTracker.getInstance(SettingsActivity.this);
-		
+				
 		// Affichage de notre vue custom
 		setContentView(R.layout.settings);
 		

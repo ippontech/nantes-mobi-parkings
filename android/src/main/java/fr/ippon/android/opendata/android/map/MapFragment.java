@@ -40,6 +40,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.github.rtyley.android.sherlock.roboguice.fragment.RoboSherlockFragment;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 import fr.ippon.android.opendata.android.LocationChangeDispatcher;
 import fr.ippon.android.opendata.android.MainApplication;
@@ -63,7 +65,7 @@ public class MapFragment extends RoboSherlockFragment {
 
 	CustomMapView mapView;
 	
-//	private Tracker mTracker;
+	private Tracker mTracker;
 
 	private MyLocationOverlay myLocation = null;
 
@@ -103,9 +105,9 @@ public class MapFragment extends RoboSherlockFragment {
             	 if (selectedParking != null)
 
                  {
-//            		 mTracker.send(MapBuilder.createEvent("Navigation vers parking", "Navigation vers parking",
-//     						"Navigation vers parking - " + String.valueOf(selectedParking.getNom()), null).build());
-                     String latitude = String.valueOf(selectedParking.getLatitude());
+            		 mTracker.send(new HitBuilders.EventBuilder("Navigation vers parking",
+								"Navigation vers parking - " + String.valueOf(selectedParking.getNom())).build());
+            		 String latitude = String.valueOf(selectedParking.getLatitude());
                      String longitude = String.valueOf(selectedParking.getLongitude());
                      Intent navigation = new Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q=" + latitude + "," + longitude));
                      startActivity(navigation);
@@ -156,21 +158,18 @@ public class MapFragment extends RoboSherlockFragment {
 		return view;
 	}
 	
-
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-//        mTracker = EasyTracker.getInstance(getActivity());
-    }
-
     @Override
     public void onStart() {
         super.onStart();
 
-//        mTracker.set(Fields.SCREEN_NAME, "Carte des parkings");
-//        mTracker.send(MapBuilder.createAppView().build());
+        // Get tracker.
+        Tracker mTracker = ((MainApplication) this.getActivity().getApplication()).getTracker();
+
+        // Set screen name.
+        mTracker.setScreenName("Carte des parkings");
+
+        // Send a screen view.
+        mTracker.send(new HitBuilders.AppViewBuilder().build());
     }
 
 	public void onResume() {

@@ -24,7 +24,6 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.util.Log;
 
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
@@ -97,7 +96,7 @@ public class MainApplication extends Application {
 	 * retourne le tracker (créé la première fois)
 	 * 
 	 */
-	synchronized Tracker getTracker() {
+	public synchronized Tracker getTracker() {
 		if (!mTrackers.containsKey(TrackerName.APP_TRACKER)) {
 
 			GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
