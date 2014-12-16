@@ -19,7 +19,7 @@ package fr.ippon.android.opendata.android;
 
 
 public enum Preference {
-	AFFICHE_INDISPO("hide_parkings", "true"),
+	HIDE_INDISPO("hide_parkings", "false"),
     SHOW_TRAFFIC("show_traffic","false"),
     DEFAULT_SORT("default_sort", "DISTANCE");
 

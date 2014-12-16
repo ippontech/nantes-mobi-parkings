@@ -91,6 +91,16 @@ public class MainApplication extends Application {
 		return actualValue;
 	}
 	
+	public static boolean isHideParking() {
+		SharedPreferences prefs = PreferenceManager
+				.getDefaultSharedPreferences(context);
+		Preference pref = Preference.HIDE_INDISPO;
+		boolean defaultValue = Boolean.parseBoolean(pref.getDefaultValue());
+		boolean actualValue = prefs.getBoolean(pref.getKey(), defaultValue);
+		return actualValue;
+		
+	}
+	
 	/**
 	 * 
 	 * retourne le tracker (créé la première fois)

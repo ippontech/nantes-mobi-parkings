@@ -31,14 +31,16 @@
         android:summary="@string/settings_default_sort_summary"
         android:title="@string/settings_default_sort" />
 
-    <!-- TODO Damien: Pour le moment, on cache ces préférence 
-    <CheckBoxPreference
-        android:defaultValue="true"
+    <!-- TODO Damien: Pour le moment, on cache ces préférences     -->
+    <SwitchPreference
+        android:defaultValue="false"
         android:key="hide_parkings"
+        android:switchTextOff="Non"
+        android:switchTextOn="Oui"
         android:summary="@string/settings_hide_parkings_summary"
         android:title="@string/settings_hide_parkings" />
 	
-    -->
+
     <SwitchPreference
         android:defaultValue="false"
         android:key="show_traffic"

@@ -17,21 +17,21 @@
 package fr.ippon.android.opendata.android;
 
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.CONTENT_URI;
-import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LATITUDE;
-import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.LONGITUDE;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.NOM;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.DISPONIBLES;
 import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.PROJECTION_ALL;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.SEUIL_COMPLET;
+import static fr.ippon.android.opendata.android.content.ParkingsTableDescription.STATUS;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
 import android.database.Cursor;
-import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v4.widget.CursorAdapter;
+import android.util.Log;
 
 /**
  * Activité qui affiche la liste des parkings complête.
@@ -39,6 +39,9 @@ import android.support.v4.widget.CursorAdapter;
  * @author Damien Raude-Morvan
  */
 public class MainListFragment extends AbstractParkingListFragment {
+
+	private static final String TAG = MainListFragment.class
+			.getName();
 	
 	public MainListFragment() {
 		super(R.string.list_parking_empty_download);
@@ -56,7 +59,16 @@ public class MainListFragment extends AbstractParkingListFragment {
 			buffer.append(") GLOB ?");
 			selectionArgs = new String[] { "*"
 					+ queryText.toString().toUpperCase() + "*" };
-		}		
+		} else if (MainApplication.isHideParking()) {
+			Log.d(TAG, "parking caché");
+			// dans un else car utilisateur s'attend à voir parking recherché même si complet
+			buffer.append(DISPONIBLES);
+			buffer.append(" > ");
+			buffer.append(SEUIL_COMPLET);
+			buffer.append(" or ");
+			buffer.append(STATUS);
+			buffer.append(" is null ");
+		}
 
 		return new CursorLoader(getActivity(), CONTENT_URI, PROJECTION_ALL,
 				buffer.toString(), selectionArgs, getOrderBy());
