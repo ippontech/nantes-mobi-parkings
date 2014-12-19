@@ -71,6 +71,9 @@
 		<meta-data android:name="com.google.android.gms.version"
         		android:value="4" />
 		
+		<!-- Pour roboguice v3 - roboguice.xml devenu inutile -->
+		<meta-data android:name="roboguice.modules"
+               android:value="fr.ippon.android.opendata.data.ParkingDataModule,fr.ippon.android.opendata.android.ParkingAndroidModule" />
     
     </application>
 

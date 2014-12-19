@@ -17,18 +17,17 @@
 package fr.ippon.android.opendata.android;
 
 
+import roboguice.activity.RoboActivity;
 import roboguice.inject.InjectView;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.github.rtyley.android.sherlock.roboguice.activity.RoboSherlockActivity;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
@@ -38,7 +37,7 @@ import com.google.android.gms.analytics.Tracker;
  * @author guillaume
  * 
  */
-public class AproposActivity extends RoboSherlockActivity {
+public class AproposActivity extends RoboActivity {
 
 	private static final String TAG = AproposActivity.class.getName();
 
@@ -70,9 +69,9 @@ public class AproposActivity extends RoboSherlockActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.apropos);
 		
-		final ActionBar ab = getSupportActionBar();
-		ab.setDisplayHomeAsUpEnabled(showHomeUp);
-		ab.setDisplayUseLogoEnabled(useLogo);
+//		final ActionBar ab = getSupportActionBar();
+//		ab.setDisplayHomeAsUpEnabled(showHomeUp);
+//		ab.setDisplayUseLogoEnabled(useLogo);
 
 		apropos_objectif.setMovementMethod(LinkMovementMethod.getInstance());
 		apropos_objectif.setText(extractHtml(R.string.apropos_objectif));
@@ -123,7 +122,7 @@ public class AproposActivity extends RoboSherlockActivity {
 	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getSupportMenuInflater().inflate(R.menu.main_menu, menu);
+		getMenuInflater().inflate(R.menu.main_menu, menu);
 
 		menu.setGroupEnabled(R.id.group_apropos, false);
 

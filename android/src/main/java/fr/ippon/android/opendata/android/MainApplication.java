@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import roboguice.RoboGuice;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -55,6 +56,7 @@ public class MainApplication extends Application {
 	HashMap<TrackerName, Tracker> mTrackers = new HashMap<TrackerName, Tracker>();
 	
 	public void onCreate() {
+		RoboGuice.setUseAnnotationDatabases(false);
 		context = this.getApplicationContext();
 
 		// Chargement des valeurs par defaut des preferences

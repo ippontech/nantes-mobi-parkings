@@ -22,6 +22,7 @@ import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapController;
 import org.osmdroid.views.overlay.MyLocationOverlay;
 
+import roboguice.fragment.RoboFragment;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -39,7 +40,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.github.rtyley.android.sherlock.roboguice.fragment.RoboSherlockFragment;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
@@ -53,7 +53,7 @@ import fr.ippon.android.opendata.data.parkings.ParkingEntity;
 /**
  * @author Damien Raude-Morvan
  */
-public class MapFragment extends RoboSherlockFragment {
+public class MapFragment extends RoboFragment {
 
 	private static final String TAG = MapFragment.class.getName();
 

@@ -59,15 +59,9 @@
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 		</dependency>
-
 		<dependency>
-			<groupId>com.google.inject</groupId>
-			<artifactId>guice</artifactId>
-			<classifier>no_aop</classifier>
-		</dependency>
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
+			<groupId>org.roboguice</groupId>
+			<artifactId>roboguice</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>

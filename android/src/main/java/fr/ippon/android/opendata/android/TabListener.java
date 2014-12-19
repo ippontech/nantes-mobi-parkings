@@ -19,9 +19,8 @@ package fr.ippon.android.opendata.android;
 import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.ActionBar.Tab;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBar.Tab;
 
 /**
  * From http://developer.android.com/guide/topics/ui/actionbar.html#Tabs

@@ -19,14 +19,11 @@
     http://actionbarsherlock.com/theming.html 
      -->
 
-    <style name="AppTheme" parent="Theme.Sherlock.ForceOverflow">
-        <item name="actionBarTabStyle">@style/AppActionBarTabStyle</item>
-        <item name="android:actionBarTabStyle">@style/AppActionBarTabStyle</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
     </style>
-    
-	<style name="AppActionBarTabStyle" parent="Widget.Sherlock.ActionBar.TabView">
+	<!-- <style name="AppActionBarTabStyle" parent="Widget.Sherlock.ActionBar.TabView">
 	    <item name="android:paddingLeft">6dp</item>
 	    <item name="android:paddingRight">6dp</item>
-	</style>
+	</style> -->
     
 </resources>

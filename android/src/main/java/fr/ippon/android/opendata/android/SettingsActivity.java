@@ -22,22 +22,21 @@ import java.util.Date;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 
+import roboguice.activity.RoboPreferenceActivity;
 import roboguice.inject.InjectView;
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.github.rtyley.android.sherlock.roboguice.activity.RoboSherlockPreferenceActivity;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
 import fr.ippon.android.opendata.android.content.ParkingDao;
 import fr.ippon.android.opendata.android.service.EquipementManagerAndroid;
 
-public class SettingsActivity extends RoboSherlockPreferenceActivity {
+public class SettingsActivity extends RoboPreferenceActivity {
 
 	private static final String LAST_UPDATE_TIMEFORMAT = "HH:mm";
 
@@ -72,9 +71,11 @@ public class SettingsActivity extends RoboSherlockPreferenceActivity {
 		// Affichage de notre vue custom
 		setContentView(R.layout.settings);
 		
-		final ActionBar ab = getSupportActionBar();
-		ab.setDisplayHomeAsUpEnabled(showHomeUp);
-		ab.setDisplayUseLogoEnabled(useLogo);
+		
+		//TODO à remettre
+//		final ActionBar ab = getSupportActionBar();
+//		ab.setDisplayHomeAsUpEnabled(showHomeUp);
+//		ab.setDisplayUseLogoEnabled(useLogo);
 		
 		String lastUpdateDispo = getDynLastUpdateTime();
 		String dynRefreshSummary = getString(
@@ -94,7 +95,7 @@ public class SettingsActivity extends RoboSherlockPreferenceActivity {
 	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getSupportMenuInflater().inflate(R.menu.main_menu, menu);
+		getMenuInflater().inflate(R.menu.main_menu, menu);
 		
 		menu.setGroupEnabled(R.id.group_preference, false);
 		

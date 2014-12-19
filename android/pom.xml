@@ -42,21 +42,7 @@
 		<dependency>
 			<groupId>org.roboguice</groupId>
 			<artifactId>roboguice</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.google.inject</groupId>
-			<artifactId>guice</artifactId>
-			<classifier>no_aop</classifier>
-		</dependency>
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.google.android</groupId>
-			<artifactId>support-v4</artifactId>
-		</dependency>
-		
+		</dependency>		
 		<dependency>
 			<groupId>org.osmdroid</groupId>
 			<artifactId>osmdroid-android</artifactId>
@@ -65,16 +51,6 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-android</artifactId>
 		</dependency>
-		
-		<dependency>
-			<groupId>com.actionbarsherlock</groupId>
-			<artifactId>library</artifactId>
-			<type>apklib</type>
-		</dependency>
-		<dependency>
-			<groupId>com.github.rtyley</groupId>
-			<artifactId>roboguice-sherlock</artifactId>
-		</dependency> 
 	</dependencies>
 
 	<build>

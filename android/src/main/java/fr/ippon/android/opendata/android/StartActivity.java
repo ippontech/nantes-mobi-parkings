@@ -21,6 +21,7 @@ import static fr.ippon.android.opendata.android.service.ServiceStatus.SERVICE_RU
 
 import javax.inject.Inject;
 
+import roboguice.activity.RoboActionBarActivity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -29,16 +30,13 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.github.rtyley.android.sherlock.roboguice.activity.RoboSherlockFragmentActivity;
-
 import fr.ippon.android.opendata.android.content.FavorisDao;
 import fr.ippon.android.opendata.android.content.ParkingDao;
 import fr.ippon.android.opendata.android.map.EquipementsItemizedOverlay;
@@ -54,7 +52,8 @@ import fr.ippon.android.opendata.data.parkings.ParkingEntity;
  * @author Damien Raude-Morvan
  * @author Guillaume Granger
  */
-public class StartActivity extends RoboSherlockFragmentActivity {
+public class StartActivity extends RoboActionBarActivity {
+
 
 	private static final String TAG = StartActivity.class.getName();
 
@@ -74,6 +73,7 @@ public class StartActivity extends RoboSherlockFragmentActivity {
 	private BroadcastReceiver receiver;
 	private Menu optionsMenu;
 	private View refreshIndeterminateProgressView = null;
+	
 
 	/**
 	 * {@inheritDoc}
@@ -82,7 +82,6 @@ public class StartActivity extends RoboSherlockFragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		
 		// Branchement des systemes de geo-loc
 		locationDispatcher.registerGpsUpdate();
 
@@ -164,7 +163,7 @@ public class StartActivity extends RoboSherlockFragmentActivity {
 	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getSupportMenuInflater().inflate(R.menu.main_menu, menu);
+		getMenuInflater().inflate(R.menu.main_menu, menu);
 		optionsMenu = menu;
 		return super.onCreateOptionsMenu(menu);
 	}
@@ -179,9 +178,10 @@ public class StartActivity extends RoboSherlockFragmentActivity {
 
 	protected void showMap() {
 		// Changement de tab
-		if (getSupportActionBar().getTabCount() > 0) {
-			getSupportActionBar().selectTab(getSupportActionBar().getTabAt(1));
-		}
+		//TODO à remettre
+//		if (getActionBar().getTabCount() > 0) {
+//			getActionBar().selectTab(getActionBar().getTabAt(1));
+//		}
 	}
 
 	/**
@@ -238,9 +238,11 @@ public class StartActivity extends RoboSherlockFragmentActivity {
 			                if (refreshIndeterminateProgressView == null) {
 			                	ServiceStatusReceiver.this.loadProgressView(context);
 			                }
-			                refreshItem.setActionView(refreshIndeterminateProgressView);
+			                //TODO à remettre
+			               // refreshItem.setActionView(refreshIndeterminateProgressView);
 						} else {
-			                refreshItem.setActionView(null);
+			                //TODO à remettre
+			               // refreshItem.setActionView(null);
 			                // si le rafraichissement a été lancé par un scroll sur la liste, on vire l'icone
 			                SwipeRefreshLayout swipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
 			                if (swipeLayout != null) { 
