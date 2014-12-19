@@ -17,9 +17,10 @@
 package fr.ippon.android.opendata.android;
 
 
-import roboguice.activity.RoboActivity;
+import roboguice.activity.RoboActionBarActivity;
 import roboguice.inject.InjectView;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -37,7 +38,7 @@ import com.google.android.gms.analytics.Tracker;
  * @author guillaume
  * 
  */
-public class AproposActivity extends RoboActivity {
+public class AproposActivity extends RoboActionBarActivity {
 
 	private static final String TAG = AproposActivity.class.getName();
 
@@ -69,9 +70,9 @@ public class AproposActivity extends RoboActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.apropos);
 		
-//		final ActionBar ab = getSupportActionBar();
-//		ab.setDisplayHomeAsUpEnabled(showHomeUp);
-//		ab.setDisplayUseLogoEnabled(useLogo);
+		final ActionBar ab = getSupportActionBar();
+		ab.setDisplayHomeAsUpEnabled(showHomeUp);
+		ab.setDisplayUseLogoEnabled(useLogo);
 
 		apropos_objectif.setMovementMethod(LinkMovementMethod.getInstance());
 		apropos_objectif.setText(extractHtml(R.string.apropos_objectif));
