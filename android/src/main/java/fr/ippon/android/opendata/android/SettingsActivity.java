@@ -87,6 +87,8 @@ public class SettingsActivity extends RoboPreferenceActivity {
 				R.string.settings_data_staticrefresh_summary, lastUpdateData);
 		refresh_staticdata.setText(staticRefreshSummary);
 
+		// pour l'instant, on ne fait rien pour ce deprecated...
+		// http://stackoverflow.com/questions/16374492/alternative-to-addpreferencesfromresource-as-its-deprecated
 		addPreferencesFromResource(R.xml.preferences);
 	}
 	
