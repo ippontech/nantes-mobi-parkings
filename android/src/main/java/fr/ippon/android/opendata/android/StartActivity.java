@@ -101,17 +101,16 @@ public class StartActivity extends RoboActionBarActivity {
 	
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mViewPager.setAdapter(parkingPagerAdapter);
+        
         // Initialize the SlidingTabLayout. Note that the order is important. First init ViewPager and Adapter and only then init SlidingTabLayout
         SlidingTabLayout mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
         mSlidingTabLayout.setViewPager(mViewPager);
 		
-//        mViewPager = (ViewPager) findViewById(R.id.pager);
-//        mViewPager.setAdapter(parkingPagerAdapter);
-//		
-//		// si on a des favoris, démarrage sur l'onglet "favoris"
-//		if (parkingDao.hasFavoris(getContentResolver())) {
-//			actionBar.setSelectedNavigationItem(2);
-//		}
+	
+		// si on a des favoris, démarrage sur l'onglet "favoris"
+		if (parkingDao.hasFavoris(getContentResolver())) {
+			mViewPager.setCurrentItem(2);
+		}
 		
 		// Lancement des services
 		DataRefreshManager.requestRefresh(this, true);
