@@ -41,6 +41,7 @@ import fr.ippon.android.opendata.android.content.ParkingDao;
 import fr.ippon.android.opendata.android.map.EquipementsItemizedOverlay;
 import fr.ippon.android.opendata.android.map.MapFragment;
 import fr.ippon.android.opendata.android.service.DataRefreshManager;
+import fr.ippon.android.opendata.android.tabs.SlidingTabLayout;
 import fr.ippon.android.opendata.data.distance.DistanceCalculator;
 import fr.ippon.android.opendata.data.parkings.ParkingEntity;
 
@@ -97,9 +98,15 @@ public class StartActivity extends RoboActionBarActivity {
 		setContentView(R.layout.start);
 		
 		parkingPagerAdapter = new ParkingPagerAdapter(getSupportFragmentManager(), this);
-		 
-        mViewPager = (ViewPager) findViewById(R.id.pager);
+	
+        mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mViewPager.setAdapter(parkingPagerAdapter);
+        // Initialize the SlidingTabLayout. Note that the order is important. First init ViewPager and Adapter and only then init SlidingTabLayout
+        SlidingTabLayout mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
+        mSlidingTabLayout.setViewPager(mViewPager);
+		
+//        mViewPager = (ViewPager) findViewById(R.id.pager);
+//        mViewPager.setAdapter(parkingPagerAdapter);
 //		
 //		// si on a des favoris, démarrage sur l'onglet "favoris"
 //		if (parkingDao.hasFavoris(getContentResolver())) {
