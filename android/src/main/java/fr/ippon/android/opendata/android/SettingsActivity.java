@@ -26,8 +26,13 @@ import roboguice.activity.RoboPreferenceActivity;
 import roboguice.inject.InjectView;
 import android.content.ContentResolver;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.analytics.HitBuilders;
@@ -41,6 +46,8 @@ public class SettingsActivity extends RoboPreferenceActivity {
 	private static final String LAST_UPDATE_TIMEFORMAT = "HH:mm";
 
 	private static final String LAST_UPDATE_DATEFORMAT = "dd/MM/yyyy";
+	
+	private Toolbar mActionBar;
 
 	@InjectView(R.id.refresh_dyndata)
 	@Nullable
@@ -57,11 +64,7 @@ public class SettingsActivity extends RoboPreferenceActivity {
 	ContentResolver contentResolver;
 
 	@Inject
-	EquipementManagerAndroid equipementManager;
-	
-	private boolean useLogo = true;
-    private boolean showHomeUp = true;
-    
+	EquipementManagerAndroid equipementManager;   
 
     
 	@Override
@@ -69,13 +72,10 @@ public class SettingsActivity extends RoboPreferenceActivity {
 		super.onCreate(savedInstanceState);
 				
 		// Affichage de notre vue custom
-		setContentView(R.layout.settings);
+		setContentView(R.layout.settings);		
 		
-		
-		//TODO à remettre
-//		final ActionBar ab = getSupportActionBar();
-//		ab.setDisplayHomeAsUpEnabled(showHomeUp);
-//		ab.setDisplayUseLogoEnabled(useLogo);
+		mActionBar.setTitle(getTitle());
+		mActionBar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
 		
 		String lastUpdateDispo = getDynLastUpdateTime();
 		String dynRefreshSummary = getString(
@@ -159,4 +159,22 @@ public class SettingsActivity extends RoboPreferenceActivity {
        // Send a screen view.
        mTracker.send(new HitBuilders.AppViewBuilder().build());  
     }
+
+	@Override
+	public void setContentView(int layoutResID) {
+		ViewGroup contentView = (ViewGroup) LayoutInflater.from(this).inflate(
+                R.layout.settings, new LinearLayout(this), false);
+
+        mActionBar = (Toolbar) contentView.findViewById(R.id.action_bar_prefs);
+        mActionBar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        getWindow().setContentView(contentView);
+    }
+    
+    
 }

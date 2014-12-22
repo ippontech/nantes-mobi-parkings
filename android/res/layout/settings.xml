@@ -19,6 +19,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
+    
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/action_bar_prefs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"/>
 
     <!-- http://yenliangl.blogspot.com/2011/04/customize-layout-of-preferenceactivity.html -->
 
