@@ -100,38 +100,6 @@ public class StartActivity extends RoboActionBarActivity {
 		 
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(parkingPagerAdapter);
-		// setup action bar for tabs
-//		ActionBar actionBar = getSupportActionBar();
-//		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-//
-//		// Configuration des tabs dans l'actionbar
-//        Resources res = getResources();
-//		ActionBar.Tab tab = actionBar
-//				.newTab()
-//				.setText("  "+res.getString(R.string.main_button_list))
-//				.setIcon(R.drawable.ic_menu_recherche)
-//				.setTabListener(
-//                        new TabListener<MainListFragment>(this, "list",
-//                                MainListFragment.class));
-//		actionBar.addTab(tab);
-//
-//		tab = actionBar
-//				.newTab()
-//				.setText("  "+res.getString(R.string.main_button_map))
-//				.setIcon(R.drawable.ic_menu_carte)
-//				.setTabListener(
-//						new TabListener<MapFragment>(this, "carte",
-//								MapFragment.class));
-//		actionBar.addTab(tab);
-//
-//		tab = actionBar
-//				.newTab()
-//				.setText("  "+res.getString(R.string.main_button_stars))
-//				.setIcon(R.drawable.ic_menu_favoris)
-//				.setTabListener(
-//						new TabListener<FavouritesListFragment>(this,
-//								"favoris", FavouritesListFragment.class));
-//		actionBar.addTab(tab);
 //		
 //		// si on a des favoris, démarrage sur l'onglet "favoris"
 //		if (parkingDao.hasFavoris(getContentResolver())) {

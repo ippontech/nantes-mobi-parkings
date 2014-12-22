@@ -17,9 +17,13 @@ package fr.ippon.android.opendata.android;
 
 import fr.ippon.android.opendata.android.map.MapFragment;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.style.ImageSpan;
 
 public class ParkingPagerAdapter extends FragmentPagerAdapter {
 
@@ -52,14 +56,24 @@ public class ParkingPagerAdapter extends FragmentPagerAdapter {
 	public CharSequence getPageTitle(int position) {
 		switch (position) {
 	        case 0:
-	            return mContext.getString(R.string.main_button_list);
+	            return getIconeTexte(R.drawable.ic_menu_recherche, R.string.main_button_list);
 	        case 1:
-	            return mContext.getString(R.string.main_button_map);
+	            return getIconeTexte(R.drawable.ic_menu_carte, R.string.main_button_map);
 	        case 2:
-	            return mContext.getString(R.string.main_button_stars);
+	            return getIconeTexte(R.drawable.ic_menu_favoris, R.string.main_button_stars);
 		}
 		return null;
     }
 	
+	private CharSequence getIconeTexte(int idDrawable, int idTexte) {
+		SpannableStringBuilder sb = new SpannableStringBuilder(" " + mContext.getString(idTexte)); // space added before text for convenience
+		
+		Drawable myDrawable = mContext.getResources().getDrawable(idDrawable);
+	    myDrawable.setBounds(0, 0, myDrawable.getIntrinsicWidth(), myDrawable.getIntrinsicHeight()); 
+	    ImageSpan span = new ImageSpan(myDrawable, ImageSpan.ALIGN_BASELINE); 
+	    sb.setSpan(span, 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE); 
+	    
+	    return sb;
+	}
 
 }
