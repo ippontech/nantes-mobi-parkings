@@ -60,7 +60,6 @@ public class MainListFragment extends AbstractParkingListFragment {
 			selectionArgs = new String[] { "*"
 					+ queryText.toString().toUpperCase() + "*" };
 		} else if (MainApplication.isHideParking()) {
-			Log.d(TAG, "parking caché");
 			// dans un else car utilisateur s'attend à voir parking recherché même si complet
 			buffer.append(DISPONIBLES);
 			buffer.append(" > ");

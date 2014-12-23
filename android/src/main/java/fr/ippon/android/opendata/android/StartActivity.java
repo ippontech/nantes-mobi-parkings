@@ -75,7 +75,7 @@ public class StartActivity extends RoboActionBarActivity {
 	private View refreshIndeterminateProgressView = null;
 	private ParkingPagerAdapter parkingPagerAdapter;
     private ViewPager mViewPager;
-	
+	private SlidingTabLayout mSlidingTabLayout;
 
 	/**
 	 * {@inheritDoc}
@@ -103,7 +103,7 @@ public class StartActivity extends RoboActionBarActivity {
         mViewPager.setAdapter(parkingPagerAdapter);
         
         // Initialize the SlidingTabLayout. Note that the order is important. First init ViewPager and Adapter and only then init SlidingTabLayout
-        SlidingTabLayout mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
+        mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
         mSlidingTabLayout.setViewPager(mViewPager);
 		
 	
@@ -155,14 +155,6 @@ public class StartActivity extends RoboActionBarActivity {
 		return MenuHandler.onOptionsItemSelected(this, item);
 	}
 
-	protected void showMap() {
-		// Changement de tab
-		//TODO à remettre
-//		if (getActionBar().getTabCount() > 0) {
-//			getActionBar().selectTab(getActionBar().getTabAt(1));
-//		}
-	}
-
 	/**
 	 * Affichage du fragment Carte
 	 */
@@ -172,9 +164,12 @@ public class StartActivity extends RoboActionBarActivity {
 		EquipementsItemizedOverlay.clearSelectedParking();
 		MapFragment.selectedParking = park;
 		EquipementsItemizedOverlay.markParkAsSelected(park.getIdObj());
-
-		// Passage a la carte
-		showMap();
+		
+		// bourrin mais sans cela récupère le mapfragment généré initialement
+		mViewPager.setAdapter(parkingPagerAdapter);
+		
+		// Changement de tab
+		mViewPager.setCurrentItem(1);
 	}
 
 	/**

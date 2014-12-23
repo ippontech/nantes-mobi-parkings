@@ -131,6 +131,7 @@ public class MapFragment extends RoboFragment {
 		mapView.invalidate();
 		mc = mapView.getController();
 
+		Log.d(TAG, "selectedParking == " + (selectedParking != null?selectedParking.getNom():"aucun"));
 		if (selectedParking != null) {
 			int latitude = (int) (selectedParking.getLatitude() * 1E6);
 			int longitude = (int) (selectedParking.getLongitude() * 1E6);

@@ -24,11 +24,14 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ImageSpan;
+import android.util.Log;
 
 public class ParkingPagerAdapter extends FragmentPagerAdapter {
+	
+	private static final String TAG = ParkingPagerAdapter.class.getName();
 
 	private Context mContext;
-	
+
 	public ParkingPagerAdapter(FragmentManager fm, Context context) {
 		super(fm);
 		mContext = context;
@@ -36,13 +39,15 @@ public class ParkingPagerAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public Fragment getItem(int position) {
+		Log.d(TAG, "position de l'onglet == " + position);
 		switch (position) {
 	        case 0:
-	            return new MainListFragment();
+	        	return MainListFragment.instantiate(mContext, MainListFragment.class.getName());
 	        case 1:
-	            return new MapFragment();
+	        	return MapFragment.instantiate(mContext, MapFragment.class.getName());
 	        case 2:
-	            return new FavouritesListFragment();
+	        	return FavouritesListFragment.instantiate(mContext, FavouritesListFragment.class.getName());
+	        	
 		}
 		return null;
 	}
@@ -75,5 +80,4 @@ public class ParkingPagerAdapter extends FragmentPagerAdapter {
 	    
 	    return sb;
 	}
-
 }
