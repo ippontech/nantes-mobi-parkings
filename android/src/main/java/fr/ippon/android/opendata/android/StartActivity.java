@@ -30,6 +30,7 @@ import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -212,11 +213,14 @@ public class StartActivity extends RoboActionBarActivity {
 			                if (refreshIndeterminateProgressView == null) {
 			                	ServiceStatusReceiver.this.loadProgressView(context);
 			                }
-			                //TODO à remettre
-			               // refreshItem.setActionView(refreshIndeterminateProgressView);
+			                //refreshItem.setActionView incompatible avec API 8 -> on retire l'icône et on ajoute si possible le refreshing
+			               refreshItem.setVisible(false);
+			               SwipeRefreshLayout swipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+			                if (swipeLayout != null) { 
+			                	swipeLayout.setRefreshing(true);
+			                }
 						} else {
-			                //TODO à remettre
-			               // refreshItem.setActionView(null);
+			                refreshItem.setVisible(true);
 			                // si le rafraichissement a été lancé par un scroll sur la liste, on vire l'icone
 			                SwipeRefreshLayout swipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
 			                if (swipeLayout != null) { 

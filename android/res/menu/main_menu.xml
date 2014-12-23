@@ -15,14 +15,15 @@
  ~ See the License for the specific language governing permissions and
  ~ limitations under the License.
  -->
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto">
 
     <group android:id="@+id/group_preference">
 	    <item
 	        android:id="@+id/menu_preference"
 	        android:icon="@drawable/ic_menu_preferences"
 	        android:title="@string/menu_settings"
-	        android:showAsAction="never"/>
+	        yourapp:showAsAction="never"/>
     </group>
     
     <group android:id="@+id/group_refresh">
@@ -30,7 +31,7 @@
 	        android:id="@+id/menu_refresh"
 	        android:icon="@drawable/ic_menu_refresh"
 	        android:title="@string/menu_refresh"
-	        android:showAsAction="always"/>
+	        yourapp:showAsAction="always"/>
     </group>
     
     <group android:id="@+id/group_apropos">
@@ -38,7 +39,7 @@
 	        android:id="@+id/menu_apropos"
 	        android:icon="@drawable/ic_menu_about"
 	        android:title="@string/menu_about"
-	        android:showAsAction="never"/>
+	        yourapp:showAsAction="never"/>
 	</group>
 
 </menu>
