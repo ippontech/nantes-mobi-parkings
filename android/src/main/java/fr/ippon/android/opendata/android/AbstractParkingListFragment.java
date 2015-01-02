@@ -154,29 +154,22 @@ public abstract class AbstractParkingListFragment extends RoboListFragment
 		searchField = (EditText) r.findViewById(R.id.search_field);
 
 		if (TextUtils.isEmpty(searchField.getText()))
-			searchField.setText(searchHint);
+			searchField.setHint(searchHint);
 
 		searchField.setOnKeyListener(new OnKeyListener() {
 			public boolean onKey(View v, int keyCode, KeyEvent event) {
 				// If the event is a key-down event on the "enter" button
 				if ((event.getAction() == KeyEvent.ACTION_DOWN)
 						&& (keyCode == KeyEvent.KEYCODE_ENTER)) {
-					// hide the keyboard
-					InputMethodManager imm = (InputMethodManager) getActivity()
-							.getSystemService(Context.INPUT_METHOD_SERVICE);
-					imm.hideSoftInputFromWindow(searchField.getWindowToken(), 0);
+					hideKeyboard();
 
 					// Perform action on key press
-					boolean okSearch = !TextUtils.isEmpty(searchField.getText())
-							&& !searchHint.equals(searchField.getText());
+					boolean okSearch = !TextUtils.isEmpty(searchField.getText());
 					queryText = okSearch ? searchField.getText().toString()
 							: null;
 					Log.d(TAG, "query: " + queryText);
 					hasSearched = true;
 					getLoaderManager().restartLoader(0, null, loaderCallBack);
-					if (queryText == null) {
-						searchField.setText(searchHint);
-					}
 					return true;
 				}
 				return false;
@@ -188,10 +181,6 @@ public abstract class AbstractParkingListFragment extends RoboListFragment
 		searchField.setCompoundDrawables(null, null, x, null);
 		searchField.setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
-				if (event.getAction() == KeyEvent.ACTION_DOWN
-						&& searchHint.equals(searchField.getText().toString())) {
-					searchField.setText("");
-				}
 				if (searchField.getCompoundDrawables()[2] == null) {
 					// cross is not being shown so no need to handle
 					return false;
@@ -203,6 +192,9 @@ public abstract class AbstractParkingListFragment extends RoboListFragment
 				if (event.getX() > searchField.getMeasuredWidth()
 						- searchField.getPaddingRight() - x.getIntrinsicWidth()) {
 					searchField.setText("");
+					queryText = "";
+					hasSearched = true;
+					getLoaderManager().restartLoader(0, null, loaderCallBack);
 					return true;
 				} else {
 					return false;
@@ -291,7 +283,11 @@ public abstract class AbstractParkingListFragment extends RoboListFragment
 		return orderBy;
 	}
 	
-	
+	private void hideKeyboard() {
+		InputMethodManager imm = (InputMethodManager) getActivity()
+				.getSystemService(Context.INPUT_METHOD_SERVICE);
+		imm.hideSoftInputFromWindow(searchField.getWindowToken(), 0);
+	}
 
 	protected LocationListener locationListener = new LocationListener() {
 
