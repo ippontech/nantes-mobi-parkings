@@ -30,6 +30,7 @@ import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -108,6 +109,10 @@ public class StartActivity extends RoboActionBarActivity {
 		if (parkingDao.hasFavoris(getContentResolver())) {
 			mViewPager.setCurrentItem(2);
 		}
+		
+		ActionBar actionBar = this.getSupportActionBar();
+		actionBar.setIcon(R.drawable.icon);
+		actionBar.setDisplayShowHomeEnabled(true);
 		
 		// Lancement des services
 		DataRefreshManager.requestRefresh(this, true);

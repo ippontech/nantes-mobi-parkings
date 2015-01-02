@@ -31,7 +31,7 @@
 	        android:id="@+id/menu_refresh"
 	        android:icon="@drawable/ic_menu_refresh"
 	        android:title="@string/menu_refresh"
-	        yourapp:showAsAction="always"/>
+	        yourapp:showAsAction="ifRoom"/>
     </group>
     
     <group android:id="@+id/group_apropos">
