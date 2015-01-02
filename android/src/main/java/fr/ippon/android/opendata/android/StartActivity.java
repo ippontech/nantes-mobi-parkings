@@ -30,12 +30,9 @@ import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBar;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 import fr.ippon.android.opendata.android.content.FavorisDao;
 import fr.ippon.android.opendata.android.content.ParkingDao;
@@ -73,7 +70,6 @@ public class StartActivity extends RoboActionBarActivity {
 	private LocalBroadcastManager localBroadcastManager;
 	private BroadcastReceiver receiver;
 	private Menu optionsMenu;
-	private View refreshIndeterminateProgressView = null;
 	private ParkingPagerAdapter parkingPagerAdapter;
     private ViewPager mViewPager;
 	private SlidingTabLayout mSlidingTabLayout;
@@ -210,17 +206,14 @@ public class StartActivity extends RoboActionBarActivity {
 					final MenuItem refreshItem = optionsMenu.findItem(R.id.menu_refresh);
 					if (refreshItem != null) {
 						if (servicesRunning > 0) {
-			                if (refreshIndeterminateProgressView == null) {
-			                	ServiceStatusReceiver.this.loadProgressView(context);
-			                }
-			                //refreshItem.setActionView incompatible avec API 8 -> on retire l'icône et on ajoute si possible le refreshing
-			               refreshItem.setVisible(false);
+			                //refreshItem.setActionView incompatible avec API 8 -> on modifie l'icône et on ajoute si possible le refreshing
+			               refreshItem.setIcon(R.drawable.ic_menu_refresh_grise);
 			               SwipeRefreshLayout swipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
 			                if (swipeLayout != null) { 
 			                	swipeLayout.setRefreshing(true);
 			                }
 						} else {
-			                refreshItem.setVisible(true);
+			                refreshItem.setIcon(R.drawable.ic_menu_refresh);
 			                // si le rafraichissement a été lancé par un scroll sur la liste, on vire l'icone
 			                SwipeRefreshLayout swipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
 			                if (swipeLayout != null) { 
@@ -243,15 +236,6 @@ public class StartActivity extends RoboActionBarActivity {
 				Toast.makeText(StartActivity.this, error,
 						Toast.LENGTH_SHORT).show();
 			}
-		}
-
-		/**
-		 * Chargement du layout qui permet de remplacer le bouton refresh
-		 */
-		private void loadProgressView(final Context context) {
-			final LayoutInflater inflater = LayoutInflater.from(context);
-			refreshIndeterminateProgressView = inflater.inflate(
-			        R.layout.actionbar_indeterminate_progress, null);
 		}
 	}
 
