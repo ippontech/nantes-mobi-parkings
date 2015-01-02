@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:maxLength="19"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
         </TableRow>
 
         <TableRow
@@ -57,7 +57,7 @@
                 android:paddingLeft="3dp"
                 android:paddingRight="3dp"
                 android:singleLine="true"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
             
             <TextView
                 android:id="@+id/parking_places"

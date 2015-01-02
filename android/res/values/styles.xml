@@ -21,9 +21,5 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
     </style>
-	<!-- <style name="AppActionBarTabStyle" parent="Widget.Sherlock.ActionBar.TabView">
-	    <item name="android:paddingLeft">6dp</item>
-	    <item name="android:paddingRight">6dp</item>
-	</style> -->
     
 </resources>
