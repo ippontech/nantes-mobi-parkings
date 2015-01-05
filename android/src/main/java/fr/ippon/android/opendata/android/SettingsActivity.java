@@ -75,7 +75,9 @@ public class SettingsActivity extends RoboPreferenceActivity {
 		setContentView(R.layout.settings);		
 		
 		mActionBar.setTitle(getTitle());
-		mActionBar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+		mActionBar.setNavigationIcon(R.drawable.ic_back_mtrl);
+		mActionBar.setBackgroundColor(getResources().getColor(R.color.background_material_dark));
+		mActionBar.setTitleTextColor(getResources().getColor(R.color.abc_primary_text_material_dark));
 		
 		String lastUpdateDispo = getDynLastUpdateTime();
 		String dynRefreshSummary = getString(
