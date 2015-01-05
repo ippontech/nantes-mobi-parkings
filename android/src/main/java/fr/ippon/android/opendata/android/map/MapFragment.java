@@ -105,6 +105,7 @@ public class MapFragment extends RoboFragment {
             	 if (selectedParking != null)
 
                  {
+            		 Log.d(TAG, "Navigation vers parking - " + String.valueOf(selectedParking.getNom()));
             		 mTracker.send(new HitBuilders.EventBuilder("Navigation vers parking",
 								"Navigation vers parking - " + String.valueOf(selectedParking.getNom())).build());
             		 String latitude = String.valueOf(selectedParking.getLatitude());
@@ -164,7 +165,7 @@ public class MapFragment extends RoboFragment {
         super.onStart();
 
         // Get tracker.
-        Tracker mTracker = ((MainApplication) this.getActivity().getApplication()).getTracker();
+        mTracker = ((MainApplication) this.getActivity().getApplication()).getTracker();
 
         // Set screen name.
         mTracker.setScreenName("Carte des parkings");
