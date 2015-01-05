@@ -254,7 +254,7 @@ public abstract class AbstractParkingListFragment extends RoboListFragment
 		public void onSharedPreferenceChanged(
 				SharedPreferences sharedPreferences, String key) {
 
-			if ((Preference.DEFAULT_SORT.getKey()).equals(key)) {
+			if ((Preference.DEFAULT_SORT.getKey()).equals(key) || Preference.HIDE_INDISPO.getKey().equals(key)) {
 				String value = MainApplication.getDefaultSort();
 				Log.d(TAG, "onSharedPreferenceChanged: " + key + "/value:"
 						+ value);
