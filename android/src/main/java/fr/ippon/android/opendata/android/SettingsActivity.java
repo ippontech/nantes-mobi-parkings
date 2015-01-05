@@ -74,11 +74,6 @@ public class SettingsActivity extends RoboPreferenceActivity {
 		// Affichage de notre vue custom
 		setContentView(R.layout.settings);		
 		
-		mActionBar.setTitle(getTitle());
-		mActionBar.setNavigationIcon(R.drawable.ic_back_mtrl);
-		mActionBar.setBackgroundColor(getResources().getColor(R.color.background_material_dark));
-		mActionBar.setTitleTextColor(getResources().getColor(R.color.abc_primary_text_material_dark));
-		
 		String lastUpdateDispo = getDynLastUpdateTime();
 		String dynRefreshSummary = getString(
 				R.string.settings_data_dynrefresh_summary, lastUpdateDispo);
@@ -176,6 +171,11 @@ public class SettingsActivity extends RoboPreferenceActivity {
                 finish();
             }
         });
+        mActionBar.setTitle(getTitle());
+		mActionBar.setNavigationIcon(R.drawable.ic_back_mtrl);
+		mActionBar.setBackgroundColor(getResources().getColor(R.color.background_material_dark));
+		mActionBar.setTitleTextColor(getResources().getColor(R.color.abc_primary_text_material_dark));
+		
 
         getWindow().setContentView(contentView);
     }

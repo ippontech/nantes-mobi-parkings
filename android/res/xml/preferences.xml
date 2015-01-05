@@ -31,21 +31,17 @@
         android:summary="@string/settings_default_sort_summary"
         android:title="@string/settings_default_sort" />
 
-    <!-- TODO Damien: Pour le moment, on cache ces préférences     -->
-    <SwitchPreference
+    <!-- Pas de SwitchPreference pour cause de : http://stackoverflow.com/questions/17664259/android-switchpreference-not-working-correctly-in-4-2-2     -->
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="hide_parkings"
-        android:switchTextOff="Non"
-        android:switchTextOn="Oui"
         android:summary="@string/settings_hide_parkings_summary"
         android:title="@string/settings_hide_parkings" />
 	
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="show_traffic"
-        android:switchTextOff="Non"
-        android:switchTextOn="Oui"
         android:summary="@string/settings_show_traffic_summary"
         android:title="@string/settings_show_traffic" />
 
